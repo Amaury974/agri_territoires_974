@@ -5,27 +5,9 @@ server <- function(input, output) {
   
   RV <- reactiveValues(data=NULL)
   
-  
-  # # Variable réactive pour stocker l'ID sélectionné
-  # selected_Com <- reactiveVal(NULL)
-  # 
-  # df_resume_commune <- reactiveVal(NULL)
-  # df_resume_label <- reactiveVal(NULL)
-  # df_resume_culture <- reactiveVal(NULL)
-  # df_resume_cheptel <- reactiveVal(NULL)
-  # 
-  # selected_interco_lib <- reactiveVal(NULL)
-  # selected_interco_com <- reactiveVal(NULL)
-  # selected_interco_num <- reactiveVal(NULL)
-  # 
-  # N_expl_comm <- reactiveVal(NULL)
-  
-  
-  
   #  ¤¤¤¤¤¤¤¤¤¤                         ¤¤                         ¤¤¤¤¤¤¤¤¤¤  #
   #####                     ACCUEIL / SÉLECTION COMMUNE                    #####
   #  ¤¤¤¤¤¤¤¤¤¤                         ¤¤                         ¤¤¤¤¤¤¤¤¤¤  #
-  
   
   ### ______________________________________________________________________ ###
   ####                  > sélection depuis select_Input                     ####
@@ -65,32 +47,6 @@ server <- function(input, output) {
   observeEvent(RV$selected_Com,{
     cat('>> accueil > changement commune > déb\n')
     
-    # # interco
-    # selected_interco_lib(filter(df_communes, Commune == RV$selected_Com)$EPCI)
-    # selected_interco_com(filter(df_communes, EPCI == selected_interco_lib())$Commune)
-    # selected_interco_num(filter(df_communes, EPCI == selected_interco_lib())%>%nrow())
-    # 
-    # f_palette(RV$selected_Com, selected_interco_lib())
-    # 
-    # 
-    # # tableaux de résumé
-    # df_resume_commune(f_resume_commune(N_SAU_com, 
-    #                                    RV$selected_Com, 
-    #                                    selected_interco_com(), 
-    #                                    selected_interco_lib()))
-    # 
-    # df_resume_culture(f_resume_culture(df_culture, 
-    #                                    RV$selected_Com, 
-    #                                    selected_interco_com(), 
-    #                                    selected_interco_lib(),
-    #                                    selected_interco_num()))
-    # 
-    # df_resume_cheptel(f_resume_betiole(df_cheptel, 
-    #                                    RV$selected_Com, 
-    #                                    selected_interco_com(), 
-    #                                    selected_interco_lib(),
-    #                                    selected_interco_num()))
-    
     # interco
     selected_interco_lib <<- filter(df_communes, Commune == RV$selected_Com)$EPCI
     selected_interco_com <<- filter(df_communes, EPCI == selected_interco_lib)$Commune
@@ -117,11 +73,6 @@ server <- function(input, output) {
                                            selected_interco_com,
                                            selected_interco_lib,
                                            selected_interco_num)
-    
-    cat('>>                               > 3 données annexes\n')
-    
-    # nombre d'exploitation de la commune
-    # N_expl_comm <<- filter(N_SAU_com, Commune == RV$selected_Com, annee == 2020)$n_exploit
     
     df_resume_label <<- f_resume_commune_label(df_resume_commune, RV$selected_Com)
     
@@ -235,7 +186,7 @@ server <- function(input, output) {
   
   output$t_anim <- renderTable({
     
-    RV$selected_Com # nécéssaire pour déclancher l'actualisation
+    RV$selected_Com # nécessaire pour déclancher l'actualisation
     
     filter(df_resume_cheptel, An == 2020) %>%
       mutate(ugb = round(ugb),
@@ -249,30 +200,6 @@ server <- function(input, output) {
       arrange(Animal)
     
   })
-  
-  
-  
-  
-  
-  
-  # output$info_clic <- renderPrint({
-  #   click <- input$carte_shape_click
-  #   
-  #   if(is.null(click)) {
-  #     return("Cliquez sur un polygone")
-  #   }
-  #   
-  #   # L'ID du polygone cliqué
-  #   id_clique <- click$id
-  #   
-  #   # # Vous pouvez récupérer toutes les infos du polygone
-  #   # polygone_selectionne <- polygones[polygones$id_colonne == id_clique, ]
-  #   
-  #   # cat("ID du polygone cliqué :", id_clique, "\n")
-  #   # cat("Coordonnées du clic :", click$lat, ",", click$lng, "\n")
-  #   # print(st_drop_geometry(polygone_selectionne))
-  # })
-  
   
   
 }

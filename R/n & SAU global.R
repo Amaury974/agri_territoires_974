@@ -21,13 +21,12 @@ fg_global_sau_et_n <- function(df_resume_commune, df_resume_label, selected_Com)
     pull(max_y)
   
   # décallage des étiquettes:
-  #       -par défaut décallage en haut
-  #       -si les lignes sont trop serrées, décallage pour fuire l'autre ligne, 
+  #       - par défaut décallage en haut
+  #       - si les lignes sont trop serrées, décallage pour fuire l'autre ligne, 
   #         càd vers le haut pour la plus grande, vers le bas pour la plus petite
   
   df_resume_label$nudge_sens_forcage <- with(df_resume_label, ifelse(sau_tot_ha > n_exploit* y_ajust, 1, -1))
-  # df_resume_label$nudge_n_exploit <- -df_resume_label$decallage_sau_tot_ha
-  
+
   df_resume_label$nudge_besoin_forcage <- with(df_resume_label, min(abs(sau_tot_ha - n_exploit*y_ajust)/max_y) <  0.15)
   
   df_resume_label$nudge_sens_sau <- with(df_resume_label,1 + 2*pmin(0, nudge_besoin_forcage * nudge_sens_forcage))

@@ -2,12 +2,6 @@
 
 f_palette <- function(selected_Com, selected_interco_lib){
   
-  
-  
-  # selected_interco_lib <<- filter(df_communes, Commune == selected_Com)$EPCI
-  # selected_interco_com <<- filter(df_communes, EPCI == selected_interco_lib)$Commune
-  # selected_interco_num <<- filter(df_communes, EPCI == selected_interco_lib)%>%nrow()
-  
   # Couleurs des graphiques par zone (le 1988 n'est pas toujours disponible)
   palette_zone <-c()
   

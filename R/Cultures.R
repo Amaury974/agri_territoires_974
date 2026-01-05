@@ -6,9 +6,6 @@
 fg_veg_SAU <-  function(df_resume_culture, selected_Com){
   cat('>> RGA > graph végétal SAU > déb\n')
   
-  # print(selected_Com)
-  # print(df_resume_culture)
-  
   graph_SAU <- df_resume_culture %>%
     filter(Culture %in% unique(filter(df_resume_culture, Zone == selected_Com, SAU > 0)$Culture)) %>% 
     ggplot(aes(x = Culture, y = SAU, fill = An_Zone)) +
@@ -24,8 +21,7 @@ fg_veg_SAU <-  function(df_resume_culture, selected_Com){
          x=NULL,
          y='SAU (ha)',
          title = "Surfaces par production végétal")
-  # caption = "réalisation : Chambre d'Agriculture de la Réunion - D3P, 2025\ndonnées : Agreste - RA 2000 à 2020")
-  
+
   cat('>>                        > fin\n\n')
   graph_SAU
 }
@@ -55,8 +51,7 @@ fg_veg_N <-  function(df_resume_culture, selected_Com){
          x=NULL,
          y="nombre d'exploitaitons",
          title = "Nombre d'exploitations par production végétal")
-  # caption = "réalisation : Chambre d'Agriculture de la Réunion - D3P, 2025\ndonnées : Agreste - RA 2000 à 2020")
-  
+
   cat('>>                       > fin\n\n')
   graph_N
 }
