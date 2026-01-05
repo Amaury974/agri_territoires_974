@@ -22,8 +22,8 @@ ui <- fluidPage(
   tags$img(
     src = "CA_LA REUNION_H_CMJN.png",
     alt = 'logo chambre',
-    style = 'position: absolute; 
-    top: 0px; left: 50%; 
+    style = 'position: absolute;
+    top: 0px; left: 50%;
     transform: translate(-50%, -10%) ;
     z-index: 9000; ',
     # height = '60px'
@@ -32,10 +32,10 @@ ui <- fluidPage(
   
   tags$p(
     'agri_territoire_974',
-    style = 'position: absolute; 
-    top: 40px; left: 50%; 
+    style = 'position: absolute;
+    top: 40px; left: 50%;
     transform: translate(-50%, 0%) ;
-    z-index: 9000; 
+    z-index: 9000;
     font-family: Lucida Console;
     font-size: 9px;'
   ),
@@ -52,45 +52,52 @@ ui <- fluidPage(
       value = 'panel_carte',
       title = "RGA", 
       
-      fluidRow(
-        column(4,
-               leafletOutput(outputId  = 'carte_communes'), #input$carte_communes_shape_click
-        ),
-        
-        column(3,
-               # textOutput("info_clic"),
-               htmlOutput("chiffre_global"),
-        ),
-        column(5,
-               plotOutput('g_global_sau_et_n'),
-        ),
+      # contenu rassemblé dans une colone centrale de 1100 px max. 
+      # Les marges absorbent le redimensionnement de la fenètre
+      div(style = "max-width: 1100px; margin: 0 auto;",
+          
+          fluidRow(
+            column(4,
+                   leafletOutput(outputId  = 'carte_communes'), #input$carte_communes_shape_click
+            ),
+            
+            column(3,
+                   # textOutput("info_clic"),
+                   htmlOutput("chiffre_global"),
+            ),
+            column(5,
+                   plotOutput('g_global_sau_et_n'),
+            ),
+          ),
+          
+          fluidRow(
+            h1('Productions Végétales'),
+            
+            column(6,
+                   plotOutput('g_veg_SAU'),
+            ),
+            column(6,
+                   plotOutput('g_veg_N'),
+            ),
+            column(12,
+                   tableOutput('t_veg')
+            ),    
+          ),
+          
+          fluidRow(
+            h1('Productions Animales'),
+            column(6,
+                   plotOutput('g_anim_ugb'),
+            ),
+            column(6,
+                   plotOutput('g_anim_N'),
+            ),
+            column(12,
+                     tableOutput('t_anim')
+            ),    
+            
+          ),
       ),
-      
-      fluidRow(
-        h1('Productions Végétales'),
-        
-        column(6,
-               plotOutput('g_veg_SAU'),
-        ),
-        column(6,
-               plotOutput('g_veg_N'),
-        ),
-        column(12,
-               tableOutput('t_veg')
-        ),    
-      ),
-      
-      fluidRow(
-        h1('Productions Animales'),
-        column(6,
-               plotOutput('g_anim_ugb'),
-        ),
-        column(6,
-               plotOutput('g_anim_N'),
-        ),
-        
-      ),
-      
     )
   )
 )

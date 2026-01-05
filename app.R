@@ -11,13 +11,13 @@
 #¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
 
 
-
-# la direction du script est donnée en argument dans l'appel
-wd <- commandArgs(trailingOnly = TRUE)
-print(wd)
-wd <- paste(wd, collapse = ' ')
-
-setwd(wd)
+# 
+# # la direction du script est donnée en argument dans l'appel
+# wd <- commandArgs(trailingOnly = TRUE)
+# print(wd)
+# wd <- paste(wd, collapse = ' ')
+# 
+# setwd(wd)
 # setwd('C:/Users/delagarde/Documents/Applications/agri_territoires_974')
 shiny::runApp(launch.browser = TRUE)
 

@@ -45,4 +45,6 @@ f_resume_betiole <- function(df_cheptel,
                            str_c(selected_interco_lib, '(moy.)'), 
                            'La Réunion(moy.)'))) %>%
     filter(!is.na(Bestiole))
+  
+  resume_cheptel
 }

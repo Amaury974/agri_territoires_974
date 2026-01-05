@@ -98,7 +98,7 @@ server <- function(input, output) {
     
     palette_zone <<- f_palette(RV$selected_Com, selected_interco_lib)
     
-    cat('>>                                > 2 résumés\n')
+    cat('>>                               > 2 résumés\n')
     
     # tableaux de résumé
     df_resume_commune <<- f_resume_commune(N_SAU_com,
@@ -118,24 +118,24 @@ server <- function(input, output) {
                                            selected_interco_lib,
                                            selected_interco_num)
     
-    cat('>>                                > 3 données annexes\n')
+    cat('>>                               > 3 données annexes\n')
     
     # nombre d'exploitation de la commune
-    N_expl_comm <<- filter(N_SAU_com, Commune == RV$selected_Com, annee == 2020)$n_exploit
+    # N_expl_comm <<- filter(N_SAU_com, Commune == RV$selected_Com, annee == 2020)$n_exploit
     
     df_resume_label <<- f_resume_commune_label(df_resume_commune, RV$selected_Com)
     
     
     # Mise à jour la carte pour highlighter le polygone sélectionné
-    cat('>>                                > 4 maj carte\n')
+    cat('>>                               > 4 maj carte\n')
     
     leafletProxy("carte_communes") %>%
       removeShape("polygone_selectionne") %>%
       addPolygons(
         data = sf_communes[sf_communes$code_insee == filter(df_communes, Commune == RV$selected_Com)$insee, ],
         fillColor = "white",
-        fillOpacity = 0.5,
-        color = "black", 
+        fillOpacity = 0.7,
+        color = "#e3191b", 
         weight = 2,
         layerId = "polygone_selectionne"
       )
@@ -155,7 +155,7 @@ server <- function(input, output) {
       # addProviderTiles('Esri.WorldTerrain') %>%
       setView(lng = 55.54,
               lat = -21.11,
-              zoom = 9.5) %>%
+              zoom = 9.3) %>%
       addPolygons(data = sf_communes,
                   fillColor = "transparent",
                   color = "black",      # Couleur des bordures
@@ -178,7 +178,6 @@ server <- function(input, output) {
   #  ¤¤¤¤¤¤¤¤¤¤                         ¤¤                         ¤¤¤¤¤¤¤¤¤¤  #
   #####                            PAGE 1 - RGA                            #####
   #  ¤¤¤¤¤¤¤¤¤¤                         ¤¤                         ¤¤¤¤¤¤¤¤¤¤  #
-  
   
   ### ______________________________________________________________________ ###
   ####                           > infos commune                            ####
@@ -207,17 +206,20 @@ server <- function(input, output) {
     ))
   
   ### ______________________________________________________________________ ###
-  ####                    > graphiques généraux végétal                     ####
+  ####                      > output généraux végétal                       ####
   
   output$g_veg_SAU  <- renderPlot(fg_veg_SAU(df_resume_culture, RV$selected_Com))
   output$g_veg_N  <- renderPlot(fg_veg_N(df_resume_culture, RV$selected_Com))
   
   output$t_veg <- renderTable({
+    
+    RV$selected_Com # nécéssaire pour déclancher l'actualisation
+    
     filter(df_resume_culture, An == 2020) %>%
       mutate(SAU = round(SAU),
              N = round(N)) %>%
       select(Zone, Culture, SAU, Nbr.Exp = N) %>%
-      pivot_wider(Culture, 
+      pivot_wider(id_cols = Culture, 
                   names_from = Zone,
                   names_sep = ' ',
                   values_from = c(SAU, Nbr.Exp), ) %>%
@@ -226,12 +228,27 @@ server <- function(input, output) {
   })
   
   ### ______________________________________________________________________ ###
-  ####                    > graphiques généraux animal                      ####
+  ####                      > output généraux animal                        ####
   
   output$g_anim_ugb  <- renderPlot(fg_anim_ugb(df_resume_cheptel, RV$selected_Com))
   output$g_anim_N  <- renderPlot(fg_anim_N(df_resume_cheptel, RV$selected_Com))
   
-  
+  output$t_anim <- renderTable({
+    
+    RV$selected_Com # nécéssaire pour déclancher l'actualisation
+    
+    filter(df_resume_cheptel, An == 2020) %>%
+      mutate(ugb = round(ugb),
+             tetes = round(tetes),
+             N = round(N)) %>%
+      select(Zone, Animal = Bestiole, UGB = ugb, Nbr.Exp = N, têtes = tetes) %>%
+      pivot_wider(id_cols = Animal, 
+                  names_from = Zone,
+                  names_sep = ' ',
+                  values_from = c(UGB, Nbr.Exp, têtes)) %>%
+      arrange(Animal)
+    
+  })
   
   
   
