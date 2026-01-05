@@ -55,3 +55,16 @@ palette_culture = c('Canne à sucre' = '#D95F02',
                     'Autre' = '#1B9E77',
                     'Polyculture/Polyélevage' = '#868686')
 
+# ~~~~{    initialisation vide    }~~~~
+
+df_resume_commune <- NULL
+df_resume_label <- NULL
+df_resume_culture <- NULL
+df_resume_cheptel <- NULL
+
+selected_interco_lib <- NULL
+selected_interco_com <- NULL
+selected_interco_num <- NULL
+
+N_expl_comm <- NULL
+

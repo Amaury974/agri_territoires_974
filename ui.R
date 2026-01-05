@@ -3,8 +3,11 @@ ui <- fluidPage(
   style = "padding: 0px;", # no gap in navbar
   
   div(
-    style = "position: absolute; top: 10px; right: 60px; z-index: 10000; font-size: 20px; ",
-    htmlOutput('Commune'),
+    style = "position: absolute; top: 10px; right: 30px; z-index: 10000; font-size: 20px; ",
+    selectInput('choix_commune', 
+                label = NULL,
+                choices = df_communes$Commune),
+    # htmlOutput('Commune'),
   ),
   
   # # ~~~~{    image d'arrière plan    }~~~~
@@ -15,7 +18,7 @@ ui <- fluidPage(
   #   height = '90%'
   # ),
   
-  # ~~~~{    image bandeau    }~~~~
+  # ~~~~{    logo / nom appli    }~~~~
   tags$img(
     src = "CA_LA REUNION_H_CMJN.png",
     alt = 'logo chambre',
@@ -23,7 +26,18 @@ ui <- fluidPage(
     top: 0px; left: 50%; 
     transform: translate(-50%, -10%) ;
     z-index: 9000; ',
-    height = '60px'
+    # height = '60px'
+    height = '50px'
+  ),
+  
+  tags$p(
+    'agri_territoire_974',
+    style = 'position: absolute; 
+    top: 40px; left: 50%; 
+    transform: translate(-50%, 0%) ;
+    z-index: 9000; 
+    font-family: Lucida Console;
+    font-size: 9px;'
   ),
   
   navbarPage(
@@ -40,7 +54,7 @@ ui <- fluidPage(
       
       fluidRow(
         column(4,
-               leafletOutput(outputId  = 'map'), #input$Carte_marker_click
+               leafletOutput(outputId  = 'carte_communes'), #input$carte_communes_shape_click
         ),
         
         column(3,

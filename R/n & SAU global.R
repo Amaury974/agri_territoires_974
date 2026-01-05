@@ -10,6 +10,7 @@
 ####                   evolution sau_tot_ha et n_exploit                    ####
 
 fg_global_sau_et_n <- function(df_resume_commune, df_resume_label, selected_Com){
+  cat('>> RGA > graph évolution générale > 1\n')
   
   y_ajust <- 3
   linetype_legend <- c('La Réunion(moy.)'='dotted')
@@ -98,6 +99,7 @@ fg_global_sau_et_n <- function(df_resume_commune, df_resume_label, selected_Com)
          title = str_c("Evolution de l'agriculture\nà ", selected_Com))
          # caption = "réalisation : Chambre d'Agriculture de la Réunion - D3P, 2025\ndonnées : Agreste - RA 1988 à 2020")
   
+  cat('>>                               > fin\n\n')
   graph_SAU.n_exploit
   
   # setwd(dir_graph)
@@ -112,6 +114,7 @@ fg_global_sau_et_n <- function(df_resume_commune, df_resume_label, selected_Com)
 
 # ~~~~{ % Com dans interco }~~~~ #
 f_chiffre_global <- function(N_SAU_com, df_resume_commune, selected_Com, selected_interco_lib, selected_interco_num){
+  cat('>> RGA > chiffre généraux\n\n')
   
 HTML(str_c(
   '<h3>',
@@ -135,7 +138,7 @@ HTML(str_c(
     mutate(classement_SAU = cumsum(!is.na(Commune))) %>%
     filter(Commune == selected_Com) %>%
     pull(classement_SAU),
-  "<sup>ème</sup></b> commune reunionnaise en surface<br><b>",
+  "<sup>ème</sup></b> commune reunionnaise en surfaces agricoles<br><b>",
 
   filter(N_SAU_com, annee == max(annee)) %>%
     arrange(-n_exploit) %>%

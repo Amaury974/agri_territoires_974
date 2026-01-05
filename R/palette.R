@@ -20,7 +20,6 @@ f_palette <- function(selected_Com, selected_interco_lib){
   # doublure avec (moy)
   palette_zone2 <- palette_zone[!str_detect(names(palette_zone), selected_Com)]
   names(palette_zone2) <- str_c(names(palette_zone2),'(moy.)')
-  palette_zone <<- c(palette_zone, palette_zone2)
-  
+  c(palette_zone, palette_zone2)
   
 }

@@ -3,26 +3,152 @@
 
 server <- function(input, output) {
   
-  # Variable réactive pour stocker l'ID sélectionné
-  selected_Com <- reactiveVal(NULL)
+  RV <- reactiveValues(data=NULL)
   
-  df_resume_commune <- reactiveVal(NULL)
-  df_resume_label <- reactiveVal(NULL)
-  df_resume_culture <- reactiveVal(NULL)
-  df_resume_cheptel <- reactiveVal(NULL)
   
-  selected_interco_lib <- reactiveVal(NULL)
-  selected_interco_com <- reactiveVal(NULL)
-  selected_interco_num <- reactiveVal(NULL)
+  # # Variable réactive pour stocker l'ID sélectionné
+  # selected_Com <- reactiveVal(NULL)
+  # 
+  # df_resume_commune <- reactiveVal(NULL)
+  # df_resume_label <- reactiveVal(NULL)
+  # df_resume_culture <- reactiveVal(NULL)
+  # df_resume_cheptel <- reactiveVal(NULL)
+  # 
+  # selected_interco_lib <- reactiveVal(NULL)
+  # selected_interco_com <- reactiveVal(NULL)
+  # selected_interco_num <- reactiveVal(NULL)
+  # 
+  # N_expl_comm <- reactiveVal(NULL)
   
-  N_expl_comm <- reactiveVal(NULL)
+  
+  
+  #  ¤¤¤¤¤¤¤¤¤¤                         ¤¤                         ¤¤¤¤¤¤¤¤¤¤  #
+  #####                     ACCUEIL / SÉLECTION COMMUNE                    #####
+  #  ¤¤¤¤¤¤¤¤¤¤                         ¤¤                         ¤¤¤¤¤¤¤¤¤¤  #
   
   
   ### ______________________________________________________________________ ###
-  ####                                 CARTE                                ####
+  ####                  > sélection depuis select_Input                     ####
   
-  # ~~~~{    Carte interactive Leaflet, onglet 1    }~~~~
-  output$map <- renderLeaflet({
+  observeEvent(input$choix_commune, {
+    cat('>> accueil > choix_commune > déb\n')
+    RV$selected_Com <- input$choix_commune
+    cat('>>                         >', RV$selected_Com, '\n')
+    cat('>>                         > fin\n\n')
+  })
+  
+  
+  ### ______________________________________________________________________ ###
+  ####                     > sélection depuis carte                         ####
+  
+  observeEvent(input$carte_communes_shape_click, {
+    cat('>> accueil > sélection depuis carte > déb\n')
+    
+    click <- input$carte_communes_shape_click
+
+    id_clique <- click$id
+    
+    if(id_clique != 'polygone_selectionne'){
+      RV$selected_Com <- filter(df_communes, insee == id_clique)$Commune
+      
+      updateSelectInput(inputId = 'choix_commune', selected = RV$selected_Com)
+    }
+    cat('>>                                  >', RV$selected_Com, '\n')
+    cat('>>                                  > fin\n\n')
+    
+  })
+  
+  
+  ### ______________________________________________________________________ ###
+  ####                      > changement de commune                         ####
+  
+  observeEvent(RV$selected_Com,{
+    cat('>> accueil > changement commune > déb\n')
+    
+    # # interco
+    # selected_interco_lib(filter(df_communes, Commune == RV$selected_Com)$EPCI)
+    # selected_interco_com(filter(df_communes, EPCI == selected_interco_lib())$Commune)
+    # selected_interco_num(filter(df_communes, EPCI == selected_interco_lib())%>%nrow())
+    # 
+    # f_palette(RV$selected_Com, selected_interco_lib())
+    # 
+    # 
+    # # tableaux de résumé
+    # df_resume_commune(f_resume_commune(N_SAU_com, 
+    #                                    RV$selected_Com, 
+    #                                    selected_interco_com(), 
+    #                                    selected_interco_lib()))
+    # 
+    # df_resume_culture(f_resume_culture(df_culture, 
+    #                                    RV$selected_Com, 
+    #                                    selected_interco_com(), 
+    #                                    selected_interco_lib(),
+    #                                    selected_interco_num()))
+    # 
+    # df_resume_cheptel(f_resume_betiole(df_cheptel, 
+    #                                    RV$selected_Com, 
+    #                                    selected_interco_com(), 
+    #                                    selected_interco_lib(),
+    #                                    selected_interco_num()))
+    
+    # interco
+    selected_interco_lib <<- filter(df_communes, Commune == RV$selected_Com)$EPCI
+    selected_interco_com <<- filter(df_communes, EPCI == selected_interco_lib)$Commune
+    selected_interco_num <<- filter(df_communes, EPCI == selected_interco_lib)%>%nrow()
+    
+    palette_zone <<- f_palette(RV$selected_Com, selected_interco_lib)
+    
+    cat('>>                                > 2 résumés\n')
+    
+    # tableaux de résumé
+    df_resume_commune <<- f_resume_commune(N_SAU_com,
+                                           RV$selected_Com,
+                                           selected_interco_com,
+                                           selected_interco_lib)
+    
+    df_resume_culture <<- f_resume_culture(df_culture,
+                                           RV$selected_Com,
+                                           selected_interco_com,
+                                           selected_interco_lib,
+                                           selected_interco_num)
+    
+    df_resume_cheptel <<- f_resume_betiole(df_cheptel,
+                                           RV$selected_Com,
+                                           selected_interco_com,
+                                           selected_interco_lib,
+                                           selected_interco_num)
+    
+    cat('>>                                > 3 données annexes\n')
+    
+    # nombre d'exploitation de la commune
+    N_expl_comm <<- filter(N_SAU_com, Commune == RV$selected_Com, annee == 2020)$n_exploit
+    
+    df_resume_label <<- f_resume_commune_label(df_resume_commune, RV$selected_Com)
+    
+    
+    # Mise à jour la carte pour highlighter le polygone sélectionné
+    cat('>>                                > 4 maj carte\n')
+    
+    leafletProxy("carte_communes") %>%
+      removeShape("polygone_selectionne") %>%
+      addPolygons(
+        data = sf_communes[sf_communes$code_insee == filter(df_communes, Commune == RV$selected_Com)$insee, ],
+        fillColor = "white",
+        fillOpacity = 0.5,
+        color = "black", 
+        weight = 2,
+        layerId = "polygone_selectionne"
+      )
+    
+    cat('>>                              > fin\n\n')
+  })
+  
+  
+  ### ______________________________________________________________________ ###
+  ####                        > Rendu initial carte                         ####
+  
+  output$carte_communes <- renderLeaflet({
+    cat('>> accueil > carte init\n')
     
     leaflet() %>%
       addTiles() %>%
@@ -48,110 +174,46 @@ server <- function(input, output) {
   })
   
   
-  # ~~~~{    réaction au clic    }~~~~
-  observeEvent(input$map_shape_click, {
-    cat('>> data > click _ 1\n')
-    
-    click <- input$map_shape_click
-    print(click)
-    
-    id_clique <- click$id
-    
-    if(id_clique != 'polygone_selectionne'){
-      
-      com_clic <- filter(df_communes, insee == id_clique)$Commune
-      
-      # Stocker l'ID
-      selected_Com(com_clic)
-      
-      cat('>>              _ ', selected_Com(), '\n')
-      
-      # interco
-      selected_interco_lib(filter(df_communes, Commune == selected_Com())$EPCI)
-      selected_interco_com(filter(df_communes, EPCI == selected_interco_lib())$Commune)
-      selected_interco_num(filter(df_communes, EPCI == selected_interco_lib())%>%nrow())
-      
-      f_palette(selected_Com(), selected_interco_lib())
-      
-
-      # tableaux de résumé
-      df_resume_commune(f_resume_commune(N_SAU_com, 
-                                         selected_Com(), 
-                                         selected_interco_com(), 
-                                         selected_interco_lib()))
-      
-      df_resume_culture(f_resume_culture(df_culture, 
-                                         selected_Com(), 
-                                         selected_interco_com(), 
-                                         selected_interco_lib(),
-                                         selected_interco_num()))
-      
-      df_resume_cheptel(f_resume_betiole(df_cheptel, 
-                                      selected_Com(), 
-                                      selected_interco_com(), 
-                                      selected_interco_lib(),
-                                      selected_interco_num()))
-      
-      N_expl_comm(filter(N_SAU_com, Commune == selected_Com(), annee == 2020)$n_exploit)
-      
-      df_resume_label(f_resume_commune_label(df_resume_commune(), selected_Com()))
-      
-      cat('>>              _ 2\n')
-      
-      # Mettre à jour la carte pour highlighter le polygone sélectionné
-      leafletProxy("map") %>%
-        removeShape("polygone_selectionne") %>%
-        addPolygons(
-          data = sf_communes[sf_communes$code_insee == id_clique, ],
-          fillColor = "white",
-          fillOpacity = 0.5,
-          color = "black", 
-          weight = 2,
-          layerId = "polygone_selectionne"
-        )
-    }
-    
-    cat('              _ fin\n\n')
-  })
   
-  
+  #  ¤¤¤¤¤¤¤¤¤¤                         ¤¤                         ¤¤¤¤¤¤¤¤¤¤  #
+  #####                            PAGE 1 - RGA                            #####
+  #  ¤¤¤¤¤¤¤¤¤¤                         ¤¤                         ¤¤¤¤¤¤¤¤¤¤  #
   
   
   ### ______________________________________________________________________ ###
-  ####                            infos commune                             ####
-  
-  # ~~~~{    Commune sélectionnée    }~~~~
-  output$Commune <- renderUI({
+  ####                           > infos commune                            ####
 
-    if(is.null(selected_Com())) return(NULL)
+  output$Commune <- renderUI({
     
-    p(selected_Com())
+    if(is.null(RV$selected_Com)) return(NULL)
+    
+    p(RV$selected_Com)
   })
   
   output$chiffre_global <- renderUI(
     f_chiffre_global(
       N_SAU_com,
-      df_resume_commune(),
-      selected_Com(),
-      selected_interco_lib(),
-      selected_interco_num()
+      df_resume_commune,
+      RV$selected_Com,
+      selected_interco_lib,
+      selected_interco_num
     ))
   
   output$g_global_sau_et_n  <- renderPlot(
     fg_global_sau_et_n(
-      df_resume_commune(), 
-      df_resume_label(), 
-      selected_Com()
+      df_resume_commune, 
+      df_resume_label, 
+      RV$selected_Com
     ))
   
   ### ______________________________________________________________________ ###
-  ####                      graphiques généraux végétal                     ####
+  ####                    > graphiques généraux végétal                     ####
   
-  output$g_veg_SAU  <- renderPlot(fg_veg_SAU(df_resume_culture(), selected_Com()))
-  output$g_veg_N  <- renderPlot(fg_veg_N(df_resume_culture(), selected_Com()))
+  output$g_veg_SAU  <- renderPlot(fg_veg_SAU(df_resume_culture, RV$selected_Com))
+  output$g_veg_N  <- renderPlot(fg_veg_N(df_resume_culture, RV$selected_Com))
   
   output$t_veg <- renderTable({
-    filter(df_resume_culture(), An == 2020) %>%
+    filter(df_resume_culture, An == 2020) %>%
       mutate(SAU = round(SAU),
              N = round(N)) %>%
       select(Zone, Culture, SAU, Nbr.Exp = N) %>%
@@ -161,13 +223,13 @@ server <- function(input, output) {
                   values_from = c(SAU, Nbr.Exp), ) %>%
       arrange(Culture)
     
-    })
+  })
   
   ### ______________________________________________________________________ ###
-  ####                      graphiques généraux animal                      ####
+  ####                    > graphiques généraux animal                      ####
   
-  output$g_anim_ugb  <- renderPlot(fg_anim_ugb(df_resume_cheptel(), selected_Com()))
-  output$g_anim_N  <- renderPlot(fg_anim_N(df_resume_cheptel(), selected_Com()))
+  output$g_anim_ugb  <- renderPlot(fg_anim_ugb(df_resume_cheptel, RV$selected_Com))
+  output$g_anim_N  <- renderPlot(fg_anim_N(df_resume_cheptel, RV$selected_Com))
   
   
   
