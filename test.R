@@ -18,7 +18,7 @@
 #                                                                              #
 ### ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤ ###
 
-setwd('M:/D_PPP_U/Amaury JORANT/Chartes Agricoles/_Analyse de données/app_RGA')
+# setwd('C:/Users/delagarde/Documents/Applications/agri_territoires_974')
 
 source('global.R')
 for(script_i in list.files('R', pattern = '.+R$')) {
@@ -91,6 +91,18 @@ fg_global_sau_et_n(df_resume_commune, df_resume_label, selected_Com)
 
 fg_veg_SAU(df_resume_culture, selected_Com)
 fg_veg_N(df_resume_culture, selected_Com)
+
+filter(df_resume_culture, An == 2020) %>%
+  select(Zone, Culture, SAU, Nbr.Exp = N) %>%
+  pivot_wider(Culture, 
+              names_from = Zone,
+              names_sep = ' ',
+              values_from = c(SAU, Nbr.Exp), ) %>%
+
+  arrange(Culture)
+
+
+
 
 fg_anim_ugb(df_resume_cheptel, selected_Com)
 fg_anim_N(df_resume_cheptel, selected_Com)

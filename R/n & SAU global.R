@@ -111,7 +111,7 @@ fg_global_sau_et_n <- function(df_resume_commune, df_resume_label, selected_Com)
 ####                                chiffres                                ####
 
 # ~~~~{ % Com dans interco }~~~~ #
-f_chiffre_global <- function(N_SAU_com, df_resume_commune, selected_Com, selected_interco_lib){
+f_chiffre_global <- function(N_SAU_com, df_resume_commune, selected_Com, selected_interco_lib, selected_interco_num){
   
 HTML(str_c(
   '<h3>',

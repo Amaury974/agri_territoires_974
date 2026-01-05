@@ -133,7 +133,8 @@ server <- function(input, output) {
       N_SAU_com,
       df_resume_commune(),
       selected_Com(),
-      selected_interco_lib()
+      selected_interco_lib(),
+      selected_interco_num()
     ))
   
   output$g_global_sau_et_n  <- renderPlot(
@@ -149,6 +150,18 @@ server <- function(input, output) {
   output$g_veg_SAU  <- renderPlot(fg_veg_SAU(df_resume_culture(), selected_Com()))
   output$g_veg_N  <- renderPlot(fg_veg_N(df_resume_culture(), selected_Com()))
   
+  output$t_veg <- renderTable({
+    filter(df_resume_culture(), An == 2020) %>%
+      mutate(SAU = round(SAU),
+             N = round(N)) %>%
+      select(Zone, Culture, SAU, Nbr.Exp = N) %>%
+      pivot_wider(Culture, 
+                  names_from = Zone,
+                  names_sep = ' ',
+                  values_from = c(SAU, Nbr.Exp), ) %>%
+      arrange(Culture)
+    
+    })
   
   ### ______________________________________________________________________ ###
   ####                      graphiques généraux animal                      ####

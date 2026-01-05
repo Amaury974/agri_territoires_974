@@ -12,6 +12,7 @@ library(sf)     # outils SIG
 library(ggplot2); theme_set(theme_bw(base_size=20)) # graphiques
 library(shadowtext)
 library(dplyr); options(dplyr.summarise.inform = FALSE)
+library(tidyr) # pivot table
 library(stringr)
 
 

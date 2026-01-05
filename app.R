@@ -18,7 +18,7 @@ print(wd)
 wd <- paste(wd, collapse = ' ')
 
 setwd(wd)
-# setwd('M:/D_PPP_U/Amaury JORANT/Chartes Agricoles/_Analyse de données/app_RGA')
+# setwd('C:/Users/delagarde/Documents/Applications/agri_territoires_974')
 shiny::runApp(launch.browser = TRUE)
 
 

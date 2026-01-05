@@ -61,6 +61,9 @@ ui <- fluidPage(
         column(6,
                plotOutput('g_veg_N'),
         ),
+        column(12,
+               tableOutput('t_veg')
+        ),    
       ),
       
       fluidRow(
