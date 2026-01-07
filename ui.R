@@ -21,7 +21,7 @@ ui <- fluidPage(
   # ~~~~{    logo / nom appli    }~~~~
   tags$img(
     src = "CA_LA REUNION_H_CMJN.png",
-    alt = 'logo chambre',
+    alt = "logo chambre d'agriculture de La Réunion",
     style = 'position: absolute;
     top: 0px; left: 50%;
     transform: translate(-50%, -10%) ;
@@ -31,7 +31,7 @@ ui <- fluidPage(
   ),
   
   tags$p(
-    'agri_territoire_974',
+    '> démo Shiny',
     style = 'position: absolute;
     top: 40px; left: 50%;
     transform: translate(-50%, 0%) ;
@@ -43,13 +43,12 @@ ui <- fluidPage(
   navbarPage(
     id = 'main_page',
     title = NULL, #'Mise en valeur des données',
-    selected ='panel_carte',
-    
+
     # header = uiOutput('selected_station'),
     
     # ~~~~{    Page 1 - carte, résumé commune    }~~~~
     tabPanel(
-      value = 'panel_carte',
+      value = 'panel_RGA',
       title = "RGA", 
       
       # contenu rassemblé dans une colone centrale de 1100 px max. 
@@ -98,6 +97,19 @@ ui <- fluidPage(
             
           ),
       ),
+    ),
+    
+    tabPanel(
+      value = 'panel_ORAB',
+      title = "ORAB", 
+    ),
+    tabPanel(
+      value = 'panel_instal',
+      title = "installations/transmissions", 
+    ),
+    tabPanel(
+      value = 'panel_etc',
+      title = "etc.", 
     )
   )
 )
