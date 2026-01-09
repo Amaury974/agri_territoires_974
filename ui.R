@@ -104,10 +104,6 @@ ui <- fluidPage(
       title = "ORAB", 
     ),
     tabPanel(
-      value = 'panel_instal',
-      title = "installations/transmissions", 
-    ),
-    tabPanel(
       value = 'panel_etc',
       title = "etc.", 
     )
