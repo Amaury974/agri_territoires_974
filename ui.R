@@ -43,7 +43,7 @@ ui <- fluidPage(
   navbarPage(
     id = 'main_page',
     title = NULL, #'Mise en valeur des données',
-
+    
     # header = uiOutput('selected_station'),
     
     # ~~~~{    Page 1 - carte, résumé commune    }~~~~
@@ -92,7 +92,7 @@ ui <- fluidPage(
                    plotOutput('g_anim_N'),
             ),
             column(12,
-                     tableOutput('t_anim')
+                   tableOutput('t_anim')
             ),    
             
           ),
@@ -100,12 +100,24 @@ ui <- fluidPage(
     ),
     
     tabPanel(
-      value = 'panel_ORAB',
-      title = "ORAB", 
-    ),
-    tabPanel(
-      value = 'panel_etc',
-      title = "etc.", 
+      value = 'panel_parcelle',
+      title = "parcelle", 
+      
+      tags$h2("Démo sélection de parcelle, mise en avant du reste de l'exploitation"),
+      
+      fluidRow(
+        column(8,
+               leafletOutput(outputId  = 'carte_parcelles'), #input$carte_parcelles_shape_click
+        ),
+        column(4,
+               htmlOutput("info_parcelle")
+               
+        )
+      ),
+      tabPanel(
+        value = 'panel_etc',
+        title = "etc.", 
+      )
     )
   )
 )

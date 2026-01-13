@@ -27,7 +27,7 @@ server <- function(input, output) {
     cat('>> accueil > sélection depuis carte > déb\n')
     
     click <- input$carte_communes_shape_click
-
+    
     id_clique <- click$id
     
     if(id_clique != 'polygone_selectionne'){
@@ -132,7 +132,7 @@ server <- function(input, output) {
   
   ### ______________________________________________________________________ ###
   ####                           > infos commune                            ####
-
+  
   output$Commune <- renderUI({
     
     if(is.null(RV$selected_Com)) return(NULL)
@@ -199,6 +199,106 @@ server <- function(input, output) {
                   values_from = c(UGB, Nbr.Exp, têtes)) %>%
       arrange(Animal)
     
+  })
+  
+  
+  
+  
+  #  ¤¤¤¤¤¤¤¤¤¤                         ¤¤                         ¤¤¤¤¤¤¤¤¤¤  #
+  #####                         PAGE 2 - PARCELLES                         #####
+  #  ¤¤¤¤¤¤¤¤¤¤                         ¤¤                         ¤¤¤¤¤¤¤¤¤¤  #
+  
+  
+  ### ______________________________________________________________________ ###
+  ####                        > Rendu initial carte                         ####
+  
+  output$carte_parcelles <- renderLeaflet({
+    cat('>> PAGE 2 > carte parcelles\n')
+    
+    
+    palette_exploitations <- colorFactor(
+      palette = ajorant.figures::mega_Palette(length(unique(sf_parcelles$expl))),                # fonction perso pour avoir une très grande palette de couleurs
+      domain = unique(sf_parcelles$expl))
+    
+    
+    leaflet() %>%
+      addTiles() %>%
+      # addProviderTiles('Esri.WorldTerrain') %>%
+      setView(lng = 55.71,
+              lat = -21.08,
+              zoom = 13) %>%
+      addMapPane("base", zIndex = 430) %>% # shown below ames_circles
+      addMapPane("dessous", zIndex = 420) %>% # shown above ames_lines
+      
+      #BOS
+      addPolygons(data = sf_parcelles,
+                  fillColor = ~palette_exploitations(expl),
+                  fillOpacity = 0.5,
+                  # les petits polygones disparaissent quand la carte est dézoomée
+                  # ne leur mettant une bordure, on les force à apparaitre
+                  color = ~palette_exploitations(expl),      # Couleur des bordures
+                  weight = 2,           # Épaisseur des bordures
+                  opacity = 0.4,
+                  layerId = ~id,
+                  
+                  highlight = highlightOptions(
+                    weight = 2,
+                    fillOpacity = 1,
+                    opacity = 1,
+                    color = 'black',
+                    # fillColor = "white",
+                    #
+                  ),
+                  options = pathOptions(pane = "base")
+                  # popup = ~paste(SECTION,	NUMERO),
+      )
+    
+  })
+  
+  ### ______________________________________________________________________ ###
+  ####                     > sélection depuis carte                         ####
+  
+  observeEvent(input$carte_parcelles_shape_click, {
+    cat('>> accueil > sélection depuis carte > déb\n')
+    
+    click <- input$carte_parcelles_shape_click
+    
+    id_clique <- click$id
+    RV$selected_parcelle <- id_clique
+    print(id_clique)
+    
+    selected_expl <- filter(sf_parcelles,id == id_clique)$expl
+    print(selected_expl)
+    cat('>>                                  > MAJ carte\n')
+    
+    if(id_clique != 'polygone_selectionne'){
+      leafletProxy("carte_parcelles") %>%
+        clearGroup("overlay") %>%
+        addPolygons(
+          data = filter(sf_parcelles,expl == selected_expl),
+          fillColor = ~palette_exploitations(expl),
+          fillOpacity = 1,
+          color = 'black',#~palette_exploitations(expl),      # Couleur des bordures
+          weight = 1,           # Épaisseur des bordures
+          opacity = 1,
+          # layerId = ~id,
+          group = 'overlay',
+          options = pathOptions(pane = "dessous")
+          
+        )
+    }
+    
+    cat('>>                                  > fin\n\n')
+    
+  })
+  
+  output$info_parcelle <- renderUI({
+    
+    if(is.null(RV$selected_parcelle)) return(NULL)
+    
+    HTML(paste(
+      '<h2>', RV$selected_parcelle,"</h2>",
+      "<br><br><p><i>Informations et graphiques à propos de la parcelle ou de l'exploitation</i></p>"))
   })
   
   

@@ -2,6 +2,10 @@
 
 
 
+### ________________________________________________________________________ ###
+####                          > Packages                                    ####
+cat('>> GLOBAL > Packages\n')
+
 
 library(shiny)
 
@@ -17,14 +21,27 @@ library(stringr)
 
 
 
+### ________________________________________________________________________ ###
+####                          > couches SIG                                 ####
 
-# ~~~~{    SIG    }~~~~
+# ~~~~{    SIG    }~~~~ #
+cat('>> GLOBAL > local SIG\n')
+
+# id_ftp <- scan('data/id_ftp.txt', what = character())
+
 sf_communes <- st_read('data/SIG/communes/communesPolygon.shp')
 sf_communes <- st_transform(sf_communes, 4326)
 sf_communes$selected <- FALSE
 
+# ~~~~{    parcelles page 2    }~~~~ #
+sf_parcelles <- read_sf('data/parcelles demo/sf_parcelles/sf_parcelles.shp')
 
-# ~~~~{    Communes insee    }~~~~
+
+### ________________________________________________________________________ ###
+####                          > Palettes                                    ####
+cat('>> GLOBAL > local SIG\n')
+
+# ~~~~{    Communes insee    }~~~~ #
 df_communes <- read.csv('data/COMMUNE.csv')
 
 
@@ -33,8 +50,12 @@ N_SAU_com <- read.csv2('data/RGA/N_SAU_com.csv')
 df_culture <- read.csv2('data/RGA/cultures.csv')
 df_cheptel <- read.csv2('data/RGA/cheptel.csv')
 
-# ~~~~{    Palettes    }~~~~
 
+### ________________________________________________________________________ ###
+####                          > Palettes                                    ####
+
+
+# ~~~~{    RGA page 1    }~~~~ #
 # les palettes des graphiques de comparaison géographiques sont généré à chaque changement de commune
 
 # Couleurs des graphiques par cultures uniquement
@@ -55,7 +76,7 @@ palette_culture = c('Canne à sucre' = '#D95F02',
                     'Autre' = '#1B9E77',
                     'Polyculture/Polyélevage' = '#868686')
 
-# ~~~~{    initialisation vide    }~~~~
+# ~~~~{    initialisation vide    }~~~~ #
 
 df_resume_commune <- NULL
 df_resume_label <- NULL
@@ -67,4 +88,10 @@ selected_interco_com <- NULL
 selected_interco_num <- NULL
 
 N_expl_comm <- NULL
+
+
+# ~~~~{    parcelles page 2    }~~~~ #
+palette_exploitations <- colorFactor(
+  palette = ajorant.figures::mega_Palette(length(unique(sf_parcelles$expl))),                # fonction perso pour avoir une très grande palette de couleurs
+  domain = unique(sf_parcelles$expl))
 
