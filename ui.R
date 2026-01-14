@@ -103,7 +103,7 @@ ui <- fluidPage(
       value = 'panel_parcelle',
       title = "parcelle", 
       
-      tags$h2("Démo sélection de parcelle, mise en avant du reste de l'exploitation"),
+      tags$h3("Démo sélection de parcelle, mise en avant du reste de l'exploitation sur la carte"),
       
       fluidRow(
         column(8,

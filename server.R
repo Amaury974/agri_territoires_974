@@ -103,7 +103,6 @@ server <- function(input, output) {
     
     leaflet() %>%
       addTiles() %>%
-      # addProviderTiles('Esri.WorldTerrain') %>%
       setView(lng = 55.54,
               lat = -21.11,
               zoom = 9.3) %>%
@@ -215,20 +214,12 @@ server <- function(input, output) {
   output$carte_parcelles <- renderLeaflet({
     cat('>> PAGE 2 > carte parcelles\n')
     
-    
-    palette_exploitations <- colorFactor(
-      palette = ajorant.figures::mega_Palette(length(unique(sf_parcelles$expl))),                # fonction perso pour avoir une très grande palette de couleurs
-      domain = unique(sf_parcelles$expl))
-    
-    
     leaflet() %>%
       addTiles() %>%
-      # addProviderTiles('Esri.WorldTerrain') %>%
       setView(lng = 55.71,
               lat = -21.08,
               zoom = 13) %>%
-      addMapPane("base", zIndex = 430) %>% # shown below ames_circles
-      addMapPane("dessous", zIndex = 420) %>% # shown above ames_lines
+     
       
       #BOS
       addPolygons(data = sf_parcelles,
@@ -249,8 +240,7 @@ server <- function(input, output) {
                     # fillColor = "white",
                     #
                   ),
-                  options = pathOptions(pane = "base")
-                  # popup = ~paste(SECTION,	NUMERO),
+                  
       )
     
   })
@@ -269,23 +259,42 @@ server <- function(input, output) {
     
     selected_expl <- filter(sf_parcelles,id == id_clique)$expl
     print(selected_expl)
+    
+    
+    palette_exploitations <- colorFactor(
+      palette = ajorant.figures::mega_Palette(length(unique(sf_parcelles$expl))),                # fonction perso pour avoir une très grande palette de couleurs
+      domain = unique(sf_parcelles$expl))
+    
+    
+    
     cat('>>                                  > MAJ carte\n')
     
     if(id_clique != 'polygone_selectionne'){
       leafletProxy("carte_parcelles") %>%
-        clearGroup("overlay") %>%
-        addPolygons(
-          data = filter(sf_parcelles,expl == selected_expl),
-          fillColor = ~palette_exploitations(expl),
-          fillOpacity = 1,
-          color = 'black',#~palette_exploitations(expl),      # Couleur des bordures
-          weight = 1,           # Épaisseur des bordures
-          opacity = 1,
-          # layerId = ~id,
-          group = 'overlay',
-          options = pathOptions(pane = "dessous")
-          
+        
+        clearShapes() %>%   # retire toutes les polygones
+        addPolygons(data = sf_parcelles,
+                    fillColor = ~palette_exploitations(expl),
+                    fillOpacity = ~ifelse(expl == selected_expl, 1, 0.5),
+                    
+                    color = ~ifelse(expl == selected_expl,'black', palette_exploitations(expl)),      # Couleur des bordures
+                    weight = ~case_when(  # Épaisseur des bordures
+                      id == id_clique ~ 2,
+                      expl == selected_expl ~1,
+                      .default = 2),
+                    
+                    opacity = ~ifelse(expl == selected_expl,1, 0.4),
+                    layerId = ~id,
+                    
+                    highlight = highlightOptions(
+                      weight = 2,
+                      fillOpacity = 1,
+                      opacity = 1,
+                      color = 'black',
+                  ),
+                    
         )
+     
     }
     
     cat('>>                                  > fin\n\n')
