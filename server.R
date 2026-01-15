@@ -103,8 +103,8 @@ server <- function(input, output) {
     
     leaflet() %>%
       addTiles() %>%
-      setView(lng = 55.54,
-              lat = -21.11,
+      setView(lng = 55.525,
+              lat = -21.1,
               zoom = 9.3) %>%
       addPolygons(data = sf_communes,
                   fillColor = "transparent",
@@ -219,28 +219,39 @@ server <- function(input, output) {
       setView(lng = 55.71,
               lat = -21.08,
               zoom = 13) %>%
-     
+      addMapPane("dessus", zIndex = 630) %>% 
+      addMapPane("dessous", zIndex = 620) %>%
       
       #BOS
-      addPolygons(data = sf_parcelles,
-                  fillColor = ~palette_exploitations(expl),
-                  fillOpacity = 0.5,
-                  # les petits polygones disparaissent quand la carte est dézoomée
-                  # ne leur mettant une bordure, on les force à apparaitre
-                  color = ~palette_exploitations(expl),      # Couleur des bordures
-                  weight = 2,           # Épaisseur des bordures
-                  opacity = 0.4,
-                  layerId = ~id,
-                  
-                  highlight = highlightOptions(
-                    weight = 2,
-                    fillOpacity = 1,
-                    opacity = 1,
-                    color = 'black',
-                    # fillColor = "white",
-                    #
-                  ),
-                  
+      addPolygons(
+        data = sf_parcelles,
+        fillColor =  ~as.vector(palette_exploitations[expl]),
+        fillOpacity = 0.5,
+        # les petits polygones disparaissent quand la carte est dézoomée
+        # ne leur mettant une bordure, on les force à apparaitre
+        color =  ~as.vector(palette_exploitations[expl]),      # Couleur des bordures
+        weight = 2,           # Épaisseur des bordures
+        opacity = 0.4,
+        layerId = ~id_prcl,
+        
+        highlight = highlightOptions(
+          weight = 2,
+          fillOpacity = 1,
+          opacity = 1,
+          color = 'black',
+          # fillColor = "white",
+          #
+        ),
+        group = 'dynamique',
+      ) %>%
+      addMarkers(
+        data=df_exploit,
+        lng = ~long,
+        lat = ~lat,
+        icon = ~list_icons[expl],
+        layerId = ~expl,
+        options = pathOptions(pane = "dessus")
+        
       )
     
   })
@@ -248,66 +259,95 @@ server <- function(input, output) {
   ### ______________________________________________________________________ ###
   ####                     > sélection depuis carte                         ####
   
-  observeEvent(input$carte_parcelles_shape_click, {
-    cat('>> accueil > sélection depuis carte > déb\n')
+  observeEvent(input$carte_parcelles_marker_click, {
+    cat('>> PAGE 2 > click marker > déb\n')
     
-    click <- input$carte_parcelles_shape_click
+    RV$selected_expl <- input$carte_parcelles_marker_click$id
+    cat('                         >', RV$selected_expl,'\n')
     
-    id_clique <- click$id
-    RV$selected_parcelle <- id_clique
-    print(id_clique)
-    
-    selected_expl <- filter(sf_parcelles,id == id_clique)$expl
-    print(selected_expl)
-    
-    
-    palette_exploitations <- colorFactor(
-      palette = ajorant.figures::mega_Palette(length(unique(sf_parcelles$expl))),                # fonction perso pour avoir une très grande palette de couleurs
-      domain = unique(sf_parcelles$expl))
-    
-    
-    
-    cat('>>                                  > MAJ carte\n')
-    
-    if(id_clique != 'polygone_selectionne'){
-      leafletProxy("carte_parcelles") %>%
-        
-        clearShapes() %>%   # retire toutes les polygones
-        addPolygons(data = sf_parcelles,
-                    fillColor = ~palette_exploitations(expl),
-                    fillOpacity = ~ifelse(expl == selected_expl, 1, 0.5),
-                    
-                    color = ~ifelse(expl == selected_expl,'black', palette_exploitations(expl)),      # Couleur des bordures
-                    weight = ~case_when(  # Épaisseur des bordures
-                      id == id_clique ~ 2,
-                      expl == selected_expl ~1,
-                      .default = 2),
-                    
-                    opacity = ~ifelse(expl == selected_expl,1, 0.4),
-                    layerId = ~id,
-                    
-                    highlight = highlightOptions(
-                      weight = 2,
-                      fillOpacity = 1,
-                      opacity = 1,
-                      color = 'black',
-                  ),
-                    
-        )
-     
-    }
-    
-    cat('>>                                  > fin\n\n')
+    RV$selected_parcelle <- ''
+    cat('                         > fin\n\n')
     
   })
+  
+  observeEvent(input$carte_parcelles_shape_click, {
+    cat('>> PAGE 2 > click polygon > déb\n')
+    
+    RV$selected_parcelle <- input$carte_parcelles_shape_click$id
+    cat('                         >', RV$selected_parcelle,'\n')
+    
+    RV$selected_expl <- str_extract(RV$selected_parcelle, '(?<= - ).+')
+    cat('                         >', RV$selected_expl,'\n')
+    cat('                         > fin\n\n')
+  })
+  
+  
+  observeEvent(c(RV$selected_expl,RV$selected_parcelle),{    
+    cat('>> PAGE 2 > MAJ carte > déb\n')
+    
+    if(RV$selected_parcelle != 'polygone_selectionne'){
+      
+      leafletProxy("carte_parcelles") %>%
+        clearGroup('dynamique') %>%
+        
+        addPolygons(
+          data = sf_parcelles,
+          fillColor =  ~as.vector(palette_exploitations[expl]),
+          fillOpacity = ~ifelse(expl == RV$selected_expl, 1, 0.5),
+          
+          color = ~ifelse(expl == RV$selected_expl,'black',  as.vector(palette_exploitations[expl])),      # Couleur des bordures
+          weight = ~case_when(  # Épaisseur des bordures
+            id_prcl == RV$selected_parcelle ~ 2,
+            expl == RV$selected_expl ~ 1,
+            .default = 2),
+          
+          opacity = ~ifelse(expl == RV$selected_expl, 1, 0.4),
+          layerId = ~id_prcl,
+          
+          highlight = highlightOptions(
+            weight = 2,
+            fillOpacity = 1,
+            opacity = 1,
+            color = 'black',
+          ),
+          group = 'dynamique',
+          
+        ) %>%
+        addMarkers(
+          data = filter(df_exploit, expl == RV$selected_expl),
+          lng  = ~long,
+          lat  = ~lat,
+          icon = black_dot,
+          options = pathOptions(pane = "dessous"),
+          group = 'dynamique',
+          
+          
+        ) 
+    }
+    
+    cat('>>                     > fin\n\n')
+    
+  })
+  
+  output$info_exploitation <- renderUI({
+    
+    if(is.null(RV$selected_expl)) return(NULL)
+
+    HTML(paste(
+      '<h2>', RV$selected_expl,"</h2>",
+      "<br><br><p><i>Informations et graphiques à propos de l'exploitation</i></p>"))
+  })
+  
+  
   
   output$info_parcelle <- renderUI({
     
     if(is.null(RV$selected_parcelle)) return(NULL)
+    if(RV$selected_parcelle == '') return(NULL)
     
     HTML(paste(
-      '<h2>', RV$selected_parcelle,"</h2>",
-      "<br><br><p><i>Informations et graphiques à propos de la parcelle ou de l'exploitation</i></p>"))
+      '<br><h2>', str_remove(RV$selected_parcelle,' - .+'),"</h2>",
+      "<br><br><p><i>Informations et graphiques à propos de la parcelle</i></p>"))
   })
   
   

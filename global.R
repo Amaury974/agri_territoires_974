@@ -27,7 +27,6 @@ library(stringr)
 # ~~~~{    SIG    }~~~~ #
 cat('>> GLOBAL > local SIG\n')
 
-# id_ftp <- scan('data/id_ftp.txt', what = character())
 
 sf_communes <- st_read('data/SIG/communes/communesPolygon.shp')
 sf_communes <- st_transform(sf_communes, 4326)
@@ -35,6 +34,7 @@ sf_communes$selected <- FALSE
 
 # ~~~~{    parcelles page 2    }~~~~ #
 sf_parcelles <- read_sf('data/parcelles demo/sf_parcelles/sf_parcelles.shp')
+df_exploit <- read.csv2('data/parcelles demo/expl demo.csv')
 
 
 ### ________________________________________________________________________ ###
@@ -42,7 +42,7 @@ sf_parcelles <- read_sf('data/parcelles demo/sf_parcelles/sf_parcelles.shp')
 cat('>> GLOBAL > local SIG\n')
 
 # ~~~~{    Communes insee    }~~~~ #
-df_communes <- read.csv('data/COMMUNE.csv')
+df_communes <- read.csv2('data/Communes_974.csv')
 
 
 # ~~~~{    RGA    }~~~~
@@ -91,7 +91,24 @@ N_expl_comm <- NULL
 
 
 # ~~~~{    parcelles page 2    }~~~~ #
-palette_exploitations <- colorFactor(
-  palette = ajorant.figures::mega_Palette(length(unique(sf_parcelles$expl))),                # fonction perso pour avoir une très grande palette de couleurs
-  domain = unique(sf_parcelles$expl))
+
+palette_exploitations <- 
+  ajorant.figures::mega_Palette(length(unique(sf_parcelles$expl)))           # une palette suffisamment grande pour toutes les exploitations
+
+names(palette_exploitations) <- unique(sf_parcelles$expl)                    # chaque couleur correspond à une exploitation
+
+
+list_icons <- ajorant.figures::leaf_colored_markers(palette_exploitations)      # liste de marqueurs colorés basés sur la palette de couleurs
+
+
+black_dot <- makeIcon(
+  iconUrl='data/SIG/dot-svgrepo-com.svg',
+  iconWidth = 20,                                                   
+  iconHeight = 20,
+  iconAnchorX = 10,
+  iconAnchorY = 24,
+)
+
+
+
 

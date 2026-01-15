@@ -110,6 +110,7 @@ ui <- fluidPage(
                leafletOutput(outputId  = 'carte_parcelles'), #input$carte_parcelles_shape_click
         ),
         column(4,
+               htmlOutput("info_exploitation"),
                htmlOutput("info_parcelle")
                
         )
