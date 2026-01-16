@@ -54,7 +54,7 @@ server <- function(input, output) {
     
     palette_zone <<- f_palette(RV$selected_Com, selected_interco_lib)
     
-    cat('>>                               > 2 résumés\n')
+    cat('>>                              > 2 résumés\n')
     
     # tableaux de résumé
     df_resume_commune <<- f_resume_commune(N_SAU_com,
@@ -78,7 +78,7 @@ server <- function(input, output) {
     
     
     # Mise à jour la carte pour highlighter le polygone sélectionné
-    cat('>>                               > 4 maj carte\n')
+    cat('>>                              > 4 maj carte\n')
     
     leafletProxy("carte_communes") %>%
       removeShape("polygone_selectionne") %>%
@@ -166,8 +166,8 @@ server <- function(input, output) {
     RV$selected_Com # nécéssaire pour déclancher l'actualisation
     
     filter(df_resume_culture, An == 2020) %>%
-      mutate(SAU = round(SAU),
-             N = round(N)) %>%
+      # mutate(SAU = round(SAU),
+      #        N = round(N)) %>%
       select(Zone, Culture, SAU, Nbr.Exp = N) %>%
       pivot_wider(id_cols = Culture, 
                   names_from = Zone,
@@ -175,7 +175,7 @@ server <- function(input, output) {
                   values_from = c(SAU, Nbr.Exp), ) %>%
       arrange(Culture)
     
-  })
+  }, digits = 0)
   
   ### ______________________________________________________________________ ###
   ####                      > output généraux animal                        ####
@@ -188,9 +188,9 @@ server <- function(input, output) {
     RV$selected_Com # nécessaire pour déclancher l'actualisation
     
     filter(df_resume_cheptel, An == 2020) %>%
-      mutate(ugb = round(ugb),
-             tetes = round(tetes),
-             N = round(N)) %>%
+      # mutate(ugb = round(ugb),
+      #        tetes = round(tetes),
+      #        N = round(N)) %>%
       select(Zone, Animal = Bestiole, UGB = ugb, Nbr.Exp = N, têtes = tetes) %>%
       pivot_wider(id_cols = Animal, 
                   names_from = Zone,
@@ -198,7 +198,7 @@ server <- function(input, output) {
                   values_from = c(UGB, Nbr.Exp, têtes)) %>%
       arrange(Animal)
     
-  })
+  }, digits = 0)
   
   
   
@@ -274,11 +274,11 @@ server <- function(input, output) {
     cat('>> PAGE 2 > click polygon > déb\n')
     
     RV$selected_parcelle <- input$carte_parcelles_shape_click$id
-    cat('                         >', RV$selected_parcelle,'\n')
+    cat('                          >', RV$selected_parcelle,'\n')
     
     RV$selected_expl <- str_extract(RV$selected_parcelle, '(?<= - ).+')
-    cat('                         >', RV$selected_expl,'\n')
-    cat('                         > fin\n\n')
+    cat('                          >', RV$selected_expl,'\n')
+    cat('                          > fin\n\n')
   })
   
   
@@ -325,7 +325,7 @@ server <- function(input, output) {
         ) 
     }
     
-    cat('>>                     > fin\n\n')
+    cat('>>                    > fin\n\n')
     
   })
   

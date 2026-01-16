@@ -22,7 +22,7 @@ fg_veg_SAU <-  function(df_resume_culture, selected_Com){
          y='SAU (ha)',
          title = "Surfaces par production végétal")
 
-  cat('>>                        > fin\n\n')
+  cat('>>                         > fin\n\n')
   graph_SAU
 }
 
