@@ -46,11 +46,3 @@ f_resume_culture <- function(df_culture,
 }
 
 
-
-
-
-
-
-
-
-

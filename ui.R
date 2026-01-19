@@ -115,7 +115,7 @@ ui <- fluidPage(
       # Les marges absorbent le redimensionnement de la fenêtre
       div(style = "max-width: 1100px; margin: 0 auto;",
           
-          tags$h3("Démo sélection de parcelle, mise en avant du reste de l'exploitation sur la carte"),
+          tags$h3(tags$i("Démo sélection de parcelles, et d'exploitations")),
           
           fluidRow(
             column(8,
@@ -163,6 +163,7 @@ ui <- fluidPage(
              tags$p(
                tags$strong("Référent des données"),
                tags$br(),
+               '###### ##### - ###########################',
                tags$br(),
                "Email: ", tags$a("contact@reunion.chambagri.fr", 
                                  href = "mailto:contact@reunion.chambagri.fr"),

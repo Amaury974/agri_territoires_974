@@ -91,6 +91,28 @@ black_dot <- makeIcon(
 )
 
 
+
+
+path_ombre <- system.file(                                                      # chemin d'accès vers l'ombre du marqueur par défaut de Leaflet,
+  "htmlwidgets/lib/leaflet/images/marker-shadow.png",                           #  dont la forme est suffisamment proche de celle du svg qu'on utilise
+  package = "leaflet"                                                           #  (on ne peut pas utiliser le dit marqueur par défaut parce qu'il est en .png et donc que la colorisation serait beaucoup plus complexe qu'avec un .svg)
+)
+black_icon <- makeIcon(
+  iconUrl='data/SIG/map-marker-plein.svg',
+  iconWidth = 28,                                                   
+  iconHeight = 28,
+  iconAnchorX = 14,
+  iconAnchorY = 26,
+  
+  shadowUrl = path_ombre,                                            # idem pour ajouter l'ombre
+  shadowWidth = 48,
+  shadowHeight = 48,
+  shadowAnchorX = 14,
+  shadowAnchorY = 48
+)
+
+
+
 leaflet() %>%
   addTiles() %>%
   # addProviderTiles('Esri.WorldTerrain') %>%
@@ -111,7 +133,7 @@ leaflet() %>%
     color = ~as.vector(palette_exploitations[expl]),     # Couleur des bordures
     weight = 2,           # Épaisseur des bordures
     opacity = 0.5,
-    layerId = ~id_parcelle,
+    layerId = ~id_prcl,
     
     highlight = highlightOptions(
       weight = 2,
@@ -134,7 +156,7 @@ leaflet() %>%
   
   addMarkers(
     data=df_exploit,
-    icon = black_dot,
+    icon = black_icon,
     options = pathOptions(pane = "dessous")
     
   ) 

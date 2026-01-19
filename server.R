@@ -317,7 +317,7 @@ server <- function(input, output) {
           data = filter(df_exploit, expl == RV$selected_expl),
           lng  = ~long,
           lat  = ~lat,
-          icon = black_dot,
+          icon = black_icon,
           options = pathOptions(pane = "dessous"),
           group = 'dynamique',
           

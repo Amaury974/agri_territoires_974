@@ -1,0 +1,465 @@
+"Commune";"insee";"An";"N";"SAU";"Culture";"Commune_MAJ";"SAU_irri";"lib"
+"Bras-Panon";97402;2000;10;8;"Maraîchage & tubercules";NA;NA;NA
+"Cilaos";97424;2000;32;9;"Maraîchage & tubercules";NA;NA;NA
+"Entre-Deux";97403;2000;78;55;"Maraîchage & tubercules";NA;NA;NA
+"L'Étang-Salé";97404;2000;47;28;"Maraîchage & tubercules";NA;NA;NA
+"La Plaine-des-Palmistes";97406;2000;28;12;"Maraîchage & tubercules";NA;NA;NA
+"La Possession";97408;2000;88;35;"Maraîchage & tubercules";NA;NA;NA
+"Le Port";97407;2000;11;7;"Maraîchage & tubercules";NA;NA;NA
+"Le Tampon";97422;2000;623;433;"Maraîchage & tubercules";NA;NA;NA
+"Les Avirons";97401;2000;43;17;"Maraîchage & tubercules";NA;NA;NA
+"Les Trois-Bassins";97423;2000;12;7;"Maraîchage & tubercules";NA;NA;NA
+"Petite-Île";97405;2000;162;97;"Maraîchage & tubercules";NA;NA;NA
+"Saint-André";97409;2000;51;28;"Maraîchage & tubercules";NA;NA;NA
+"Saint-Benoît";97410;2000;42;26;"Maraîchage & tubercules";NA;NA;NA
+"Saint-Denis";97411;2000;116;65;"Maraîchage & tubercules";NA;NA;NA
+"Saint-Joseph";97412;2000;128;74;"Maraîchage & tubercules";NA;NA;NA
+"Saint-Leu";97413;2000;122;66;"Maraîchage & tubercules";NA;NA;NA
+"Saint-Louis";97414;2000;97;47;"Maraîchage & tubercules";NA;NA;NA
+"Saint-Paul";97415;2000;211;124;"Maraîchage & tubercules";NA;NA;NA
+"Saint-Philippe";97417;2000;24;37;"Maraîchage & tubercules";NA;NA;NA
+"Saint-Pierre";97416;2000;114;93;"Maraîchage & tubercules";NA;NA;NA
+"Sainte-Marie";97418;2000;24;8;"Maraîchage & tubercules";NA;NA;NA
+"Sainte-Rose";97419;2000;21;18;"Maraîchage & tubercules";NA;NA;NA
+"Sainte-Suzanne";97420;2000;31;18;"Maraîchage & tubercules";NA;NA;NA
+"Salazie";97421;2000;210;171;"Maraîchage & tubercules";NA;NA;NA
+"Les Avirons";97401;2000;11;5;"Céréales";NA;NA;NA
+"Les Avirons";97401;2000;66;212;"Canne à sucre";NA;NA;NA
+"Les Avirons";97401;2000;36;100;"STH & fourrages";NA;NA;NA
+"Les Avirons";97401;2000;13;3;"Grain";NA;NA;NA
+"Les Avirons";97401;2000;8;7;"Horticulture";NA;NA;NA
+"Bras-Panon";97402;2000;7;1;"PAPAM";NA;NA;NA
+"Bras-Panon";97402;2000;177;945;"Canne à sucre";NA;NA;NA
+"Bras-Panon";97402;2000;6;11;"STH & fourrages";NA;NA;NA
+"Bras-Panon";97402;2000;3;1;"Horticulture";NA;NA;NA
+"Entre-Deux";97403;2000;11;3;"Céréales";NA;NA;NA
+"Entre-Deux";97403;2000;22;6;"PAPAM";NA;NA;NA
+"Entre-Deux";97403;2000;17;35;"Canne à sucre";NA;NA;NA
+"Entre-Deux";97403;2000;29;27;"STH & fourrages";NA;NA;NA
+"Entre-Deux";97403;2000;29;10;"Grain";NA;NA;NA
+"L'Étang-Salé";97404;2000;16;8;"Céréales";NA;NA;NA
+"L'Étang-Salé";97404;2000;20;6;"PAPAM";NA;NA;NA
+"L'Étang-Salé";97404;2000;66;246;"Canne à sucre";NA;NA;NA
+"L'Étang-Salé";97404;2000;28;35;"STH & fourrages";NA;NA;NA
+"L'Étang-Salé";97404;2000;6;4;"Horticulture";NA;NA;NA
+"Petite-Île";97405;2000;28;11;"Céréales";NA;NA;NA
+"Petite-Île";97405;2000;19;8;"PAPAM";NA;NA;NA
+"Petite-Île";97405;2000;331;1276;"Canne à sucre";NA;NA;NA
+"Petite-Île";97405;2000;36;49;"STH & fourrages";NA;NA;NA
+"La Plaine-des-Palmistes";97406;2000;59;552;"STH & fourrages";NA;NA;NA
+"La Plaine-des-Palmistes";97406;2000;5;1;"Horticulture";NA;NA;NA
+"Le Port";97407;2000;12;6;"PAPAM";NA;NA;NA
+"La Possession";97408;2000;61;28;"Céréales";NA;NA;NA
+"La Possession";97408;2000;25;81;"Canne à sucre";NA;NA;NA
+"La Possession";97408;2000;17;31;"STH & fourrages";NA;NA;NA
+"La Possession";97408;2000;21;6;"Grain";NA;NA;NA
+"La Possession";97408;2000;6;1;"Horticulture";NA;NA;NA
+"Saint-André";97409;2000;18;4;"PAPAM";NA;NA;NA
+"Saint-André";97409;2000;246;2938;"Canne à sucre";NA;NA;NA
+"Saint-André";97409;2000;23;13;"STH & fourrages";NA;NA;NA
+"Saint-André";97409;2000;5;0;"Grain";NA;NA;NA
+"Saint-André";97409;2000;15;5;"Horticulture";NA;NA;NA
+"Saint-Benoît";97410;2000;5;2;"Céréales";NA;NA;NA
+"Saint-Benoît";97410;2000;15;14;"PAPAM";NA;NA;NA
+"Saint-Benoît";97410;2000;513;2791;"Canne à sucre";NA;NA;NA
+"Saint-Benoît";97410;2000;57;276;"STH & fourrages";NA;NA;NA
+"Saint-Benoît";97410;2000;12;18;"Horticulture";NA;NA;NA
+"Saint-Denis";97411;2000;9;3;"Céréales";NA;NA;NA
+"Saint-Denis";97411;2000;14;1;"PAPAM";NA;NA;NA
+"Saint-Denis";97411;2000;91;367;"Canne à sucre";NA;NA;NA
+"Saint-Denis";97411;2000;43;44;"STH & fourrages";NA;NA;NA
+"Saint-Denis";97411;2000;20;7;"Horticulture";NA;NA;NA
+"Saint-Joseph";97412;2000;24;15;"Céréales";NA;NA;NA
+"Saint-Joseph";97412;2000;24;10;"PAPAM";NA;NA;NA
+"Saint-Joseph";97412;2000;352;1698;"Canne à sucre";NA;NA;NA
+"Saint-Joseph";97412;2000;140;667;"STH & fourrages";NA;NA;NA
+"Saint-Joseph";97412;2000;10;2;"Grain";NA;NA;NA
+"Saint-Leu";97413;2000;82;54;"Céréales";NA;NA;NA
+"Saint-Leu";97413;2000;11;2;"PAPAM";NA;NA;NA
+"Saint-Leu";97413;2000;277;1446;"Canne à sucre";NA;NA;NA
+"Saint-Leu";97413;2000;111;1327;"STH & fourrages";NA;NA;NA
+"Saint-Leu";97413;2000;23;8;"Grain";NA;NA;NA
+"Saint-Leu";97413;2000;9;2;"Horticulture";NA;NA;NA
+"Saint-Louis";97414;2000;20;4;"Céréales";NA;NA;NA
+"Saint-Louis";97414;2000;25;5;"PAPAM";NA;NA;NA
+"Saint-Louis";97414;2000;443;1552;"Canne à sucre";NA;NA;NA
+"Saint-Louis";97414;2000;99;223;"STH & fourrages";NA;NA;NA
+"Saint-Louis";97414;2000;25;4;"Grain";NA;NA;NA
+"Saint-Louis";97414;2000;6;1;"Horticulture";NA;NA;NA
+"Saint-Paul";97415;2000;124;63;"Céréales";NA;NA;NA
+"Saint-Paul";97415;2000;45;13;"PAPAM";NA;NA;NA
+"Saint-Paul";97415;2000;493;1857;"Canne à sucre";NA;NA;NA
+"Saint-Paul";97415;2000;207;1036;"STH & fourrages";NA;NA;NA
+"Saint-Paul";97415;2000;41;14;"Grain";NA;NA;NA
+"Saint-Paul";97415;2000;38;15;"Horticulture";NA;NA;NA
+"Saint-Pierre";97416;2000;24;12;"Céréales";NA;NA;NA
+"Saint-Pierre";97416;2000;726;3455;"Canne à sucre";NA;NA;NA
+"Saint-Pierre";97416;2000;106;420;"STH & fourrages";NA;NA;NA
+"Saint-Pierre";97416;2000;11;2;"Grain";NA;NA;NA
+"Saint-Philippe";97417;2000;91;162;"PAPAM";NA;NA;NA
+"Saint-Philippe";97417;2000;130;757;"Canne à sucre";NA;NA;NA
+"Sainte-Marie";97418;2000;4;2;"Céréales";NA;NA;NA
+"Sainte-Marie";97418;2000;108;2069;"Canne à sucre";NA;NA;NA
+"Sainte-Marie";97418;2000;65;253;"STH & fourrages";NA;NA;NA
+"Sainte-Marie";97418;2000;3;0;"Grain";NA;NA;NA
+"Sainte-Marie";97418;2000;47;16;"Horticulture";NA;NA;NA
+"Sainte-Rose";97419;2000;17;29;"PAPAM";NA;NA;NA
+"Sainte-Rose";97419;2000;185;1159;"Canne à sucre";NA;NA;NA
+"Sainte-Suzanne";97420;2000;6;4;"Céréales";NA;NA;NA
+"Sainte-Suzanne";97420;2000;14;4;"PAPAM";NA;NA;NA
+"Sainte-Suzanne";97420;2000;191;1403;"Canne à sucre";NA;NA;NA
+"Sainte-Suzanne";97420;2000;22;33;"STH & fourrages";NA;NA;NA
+"Sainte-Suzanne";97420;2000;5;2;"Horticulture";NA;NA;NA
+"Salazie";97421;2000;15;12;"Céréales";NA;NA;NA
+"Salazie";97421;2000;5;2;"PAPAM";NA;NA;NA
+"Salazie";97421;2000;18;73;"Canne à sucre";NA;NA;NA
+"Salazie";97421;2000;100;93;"STH & fourrages";NA;NA;NA
+"Salazie";97421;2000;9;4;"Horticulture";NA;NA;NA
+"Le Tampon";97422;2000;31;14;"Céréales";NA;NA;NA
+"Le Tampon";97422;2000;28;8;"PAPAM";NA;NA;NA
+"Le Tampon";97422;2000;241;1305;"Canne à sucre";NA;NA;NA
+"Le Tampon";97422;2000;417;5241;"STH & fourrages";NA;NA;NA
+"Le Tampon";97422;2000;77;17;"Grain";NA;NA;NA
+"Le Tampon";97422;2000;92;29;"Horticulture";NA;NA;NA
+"Les Trois-Bassins";97423;2000;11;6;"Céréales";NA;NA;NA
+"Les Trois-Bassins";97423;2000;78;251;"Canne à sucre";NA;NA;NA
+"Les Trois-Bassins";97423;2000;63;682;"STH & fourrages";NA;NA;NA
+"Cilaos";97424;2000;73;26;"Céréales";NA;NA;NA
+"Cilaos";97424;2000;26;17;"STH & fourrages";NA;NA;NA
+"Cilaos";97424;2000;85;49;"Grain";NA;NA;NA
+"Les Avirons";97401;2010;34;112,49;"STH & fourrages";"LES AVIRONS";10,7;NA
+"Les Avirons";97401;2020;26;57,04;"STH & fourrages";"LES AVIRONS";8,92;NA
+"Les Avirons";97401;2010;58;26,4;"Maraîchage & tubercules";"LES AVIRONS";8,97;NA
+"Les Avirons";97401;2020;30;10,92;"Maraîchage & tubercules";"LES AVIRONS";8,86;NA
+"Les Avirons";97401;2010;0;0;"Céréales";"LES AVIRONS";0;"céréales"
+"Les Avirons";97401;2020;0;0;"Céréales";"LES AVIRONS";NA;"céréales"
+"Les Avirons";97401;2010;0;0;"Grain";"LES AVIRONS";0;"protéagineux et légumes secs pour leur graine"
+"Les Avirons";97401;2020;0;0;"Grain";"LES AVIRONS";NA;"protéagineux et légumes secs pour leur graine"
+"Les Avirons";97401;2010;36;136,19;"Canne à sucre";"LES AVIRONS";55,69;"plantes à fibres et plantes industrielles diverses"
+"Les Avirons";97401;2020;21;98,29;"Canne à sucre";"LES AVIRONS";33,91;"plantes à fibres et plantes industrielles diverses"
+"Les Avirons";97401;2010;15;1,28;"PAPAM";"LES AVIRONS";1,12;"plantes à parfum, aromatiques, médicinales"
+"Les Avirons";97401;2020;11;2,17;"PAPAM";"LES AVIRONS";2,13;"plantes à parfum, aromatiques, médicinales"
+"Les Avirons";97401;2010;7;2,35;"Horticulture";"LES AVIRONS";0;"Fleurs et plantes ornementales"
+"Les Avirons";97401;2020;5;2,22;"Horticulture";"LES AVIRONS";2,12;"Fleurs et plantes ornementales"
+"Bras-Panon";97402;2010;10;6,63;"STH & fourrages";"BRAS-PANON";0;NA
+"Bras-Panon";97402;2020;6;7,68;"STH & fourrages";"BRAS-PANON";0;NA
+"Bras-Panon";97402;2010;18;10,8;"Maraîchage & tubercules";"BRAS-PANON";0,73;NA
+"Bras-Panon";97402;2020;17;4,9;"Maraîchage & tubercules";"BRAS-PANON";0,8;NA
+"Bras-Panon";97402;2010;NA;NA;"Céréales";"BRAS-PANON";NA;"céréales"
+"Bras-Panon";97402;2020;NA;0,6;"Céréales";"BRAS-PANON";NA;"céréales"
+"Bras-Panon";97402;2010;0;0;"Grain";"BRAS-PANON";0;"protéagineux et légumes secs pour leur graine"
+"Bras-Panon";97402;2020;NA;NA;"Grain";"BRAS-PANON";NA;"protéagineux et légumes secs pour leur graine"
+"Bras-Panon";97402;2010;139;899,48;"Canne à sucre";"BRAS-PANON";0;"plantes à fibres et plantes industrielles diverses"
+"Bras-Panon";97402;2020;116;842,01;"Canne à sucre";"BRAS-PANON";NA;"plantes à fibres et plantes industrielles diverses"
+"Bras-Panon";97402;2010;5;3,24;"PAPAM";"BRAS-PANON";NA;"plantes à parfum, aromatiques, médicinales"
+"Bras-Panon";97402;2020;11;8,95;"PAPAM";"BRAS-PANON";0,37;"plantes à parfum, aromatiques, médicinales"
+"Bras-Panon";97402;2010;7;7,09;"Horticulture";"BRAS-PANON";0;"Fleurs et plantes ornementales"
+"Bras-Panon";97402;2020;3;0,64;"Horticulture";"BRAS-PANON";NA;"Fleurs et plantes ornementales"
+"Entre-Deux";97403;2010;20;27,32;"STH & fourrages";"ENTRE-DEUX";13,94;NA
+"Entre-Deux";97403;2020;13;8,87;"STH & fourrages";"ENTRE-DEUX";5,11;NA
+"Entre-Deux";97403;2010;64;44,59;"Maraîchage & tubercules";"ENTRE-DEUX";41,93;NA
+"Entre-Deux";97403;2020;44;24,92;"Maraîchage & tubercules";"ENTRE-DEUX";24,1;NA
+"Entre-Deux";97403;2010;0;0;"Céréales";"ENTRE-DEUX";0;"céréales"
+"Entre-Deux";97403;2020;NA;0,23;"Céréales";"ENTRE-DEUX";NA;"céréales"
+"Entre-Deux";97403;2010;NA;NA;"Grain";"ENTRE-DEUX";NA;"protéagineux et légumes secs pour leur graine"
+"Entre-Deux";97403;2020;0;0;"Grain";"ENTRE-DEUX";NA;"protéagineux et légumes secs pour leur graine"
+"Entre-Deux";97403;2010;8;16,62;"Canne à sucre";"ENTRE-DEUX";11,92;"plantes à fibres et plantes industrielles diverses"
+"Entre-Deux";97403;2020;4;9,89;"Canne à sucre";"ENTRE-DEUX";NA;"plantes à fibres et plantes industrielles diverses"
+"Entre-Deux";97403;2010;7;1,15;"PAPAM";"ENTRE-DEUX";1,15;"plantes à parfum, aromatiques, médicinales"
+"Entre-Deux";97403;2020;9;1,89;"PAPAM";"ENTRE-DEUX";1,86;"plantes à parfum, aromatiques, médicinales"
+"Entre-Deux";97403;2010;NA;NA;"Horticulture";"ENTRE-DEUX";0;"Fleurs et plantes ornementales"
+"Entre-Deux";97403;2020;NA;NA;"Horticulture";"ENTRE-DEUX";NA;"Fleurs et plantes ornementales"
+"L'Étang-Salé";97404;2010;44;64,16;"STH & fourrages";"L'ETANG-SALE";44,01;NA
+"L'Étang-Salé";97404;2020;43;84,06;"STH & fourrages";"L'ETANG-SALE";63,3;NA
+"L'Étang-Salé";97404;2010;62;29,94;"Maraîchage & tubercules";"L'ETANG-SALE";25,85;NA
+"L'Étang-Salé";97404;2020;50;32,28;"Maraîchage & tubercules";"L'ETANG-SALE";29,78;NA
+"L'Étang-Salé";97404;2010;NA;NA;"Céréales";"L'ETANG-SALE";NA;"céréales"
+"L'Étang-Salé";97404;2020;NA;0,4;"Céréales";"L'ETANG-SALE";NA;"céréales"
+"L'Étang-Salé";97404;2010;0;0;"Grain";"L'ETANG-SALE";0;"protéagineux et légumes secs pour leur graine"
+"L'Étang-Salé";97404;2020;NA;NA;"Grain";"L'ETANG-SALE";NA;"protéagineux et légumes secs pour leur graine"
+"L'Étang-Salé";97404;2010;46;284,24;"Canne à sucre";"L'ETANG-SALE";203,99;"plantes à fibres et plantes industrielles diverses"
+"L'Étang-Salé";97404;2020;36;175,53;"Canne à sucre";"L'ETANG-SALE";149,46;"plantes à fibres et plantes industrielles diverses"
+"L'Étang-Salé";97404;2010;28;11,8;"PAPAM";"L'ETANG-SALE";11,75;"plantes à parfum, aromatiques, médicinales"
+"L'Étang-Salé";97404;2020;17;4,85;"PAPAM";"L'ETANG-SALE";4,4;"plantes à parfum, aromatiques, médicinales"
+"L'Étang-Salé";97404;2010;4;1,21;"Horticulture";"L'ETANG-SALE";0;"Fleurs et plantes ornementales"
+"L'Étang-Salé";97404;2020;5;0,89;"Horticulture";"L'ETANG-SALE";0,89;"Fleurs et plantes ornementales"
+"Petite-Île";97405;2010;38;39,73;"STH & fourrages";"PETITE-ILE";6,26;NA
+"Petite-Île";97405;2020;23;55,51;"STH & fourrages";"PETITE-ILE";3,23;NA
+"Petite-Île";97405;2010;199;133,27;"Maraîchage & tubercules";"PETITE-ILE";70,2;NA
+"Petite-Île";97405;2020;171;103,06;"Maraîchage & tubercules";"PETITE-ILE";60,59;NA
+"Petite-Île";97405;2010;13;3,98;"Céréales";"PETITE-ILE";0,93;"céréales"
+"Petite-Île";97405;2020;7;1,98;"Céréales";"PETITE-ILE";NA;"céréales"
+"Petite-Île";97405;2010;0;0;"Grain";"PETITE-ILE";0;"protéagineux et légumes secs pour leur graine"
+"Petite-Île";97405;2020;NA;NA;"Grain";"PETITE-ILE";NA;"protéagineux et légumes secs pour leur graine"
+"Petite-Île";97405;2010;219;1113,64;"Canne à sucre";"PETITE-ILE";424;"plantes à fibres et plantes industrielles diverses"
+"Petite-Île";97405;2020;160;948,25;"Canne à sucre";"PETITE-ILE";372,19;"plantes à fibres et plantes industrielles diverses"
+"Petite-Île";97405;2010;52;12,15;"PAPAM";"PETITE-ILE";7,44;"plantes à parfum, aromatiques, médicinales"
+"Petite-Île";97405;2020;55;20,64;"PAPAM";"PETITE-ILE";16,09;"plantes à parfum, aromatiques, médicinales"
+"Petite-Île";97405;2010;NA;NA;"Horticulture";"PETITE-ILE";0;"Fleurs et plantes ornementales"
+"Petite-Île";97405;2020;9;5,85;"Horticulture";"PETITE-ILE";4,98;"Fleurs et plantes ornementales"
+"La Plaine-des-Palmistes";97406;2010;54;390,39;"STH & fourrages";"LA PLAINE-DES-PALMISTES";0;NA
+"La Plaine-des-Palmistes";97406;2020;31;302,28;"STH & fourrages";"LA PLAINE-DES-PALMISTES";0;NA
+"La Plaine-des-Palmistes";97406;2010;34;20,16;"Maraîchage & tubercules";"LA PLAINE-DES-PALMISTES";6,27;NA
+"La Plaine-des-Palmistes";97406;2020;22;7,27;"Maraîchage & tubercules";"LA PLAINE-DES-PALMISTES";2,58;NA
+"La Plaine-des-Palmistes";97406;2010;0;0;"Céréales";"LA PLAINE-DES-PALMISTES";0;"céréales"
+"La Plaine-des-Palmistes";97406;2020;0;0;"Céréales";"LA PLAINE-DES-PALMISTES";NA;"céréales"
+"La Plaine-des-Palmistes";97406;2010;0;0;"Grain";"LA PLAINE-DES-PALMISTES";0;"protéagineux et légumes secs pour leur graine"
+"La Plaine-des-Palmistes";97406;2020;0;0;"Grain";"LA PLAINE-DES-PALMISTES";NA;"protéagineux et légumes secs pour leur graine"
+"La Plaine-des-Palmistes";97406;2010;5;12,45;"Canne à sucre";"LA PLAINE-DES-PALMISTES";NA;"plantes à fibres et plantes industrielles diverses"
+"La Plaine-des-Palmistes";97406;2020;0;0;"Canne à sucre";"LA PLAINE-DES-PALMISTES";NA;"plantes à fibres et plantes industrielles diverses"
+"La Plaine-des-Palmistes";97406;2010;12;2,75;"PAPAM";"LA PLAINE-DES-PALMISTES";1,09;"plantes à parfum, aromatiques, médicinales"
+"La Plaine-des-Palmistes";97406;2020;9;14,21;"PAPAM";"LA PLAINE-DES-PALMISTES";0,05;"plantes à parfum, aromatiques, médicinales"
+"La Plaine-des-Palmistes";97406;2010;4;1,5;"Horticulture";"LA PLAINE-DES-PALMISTES";0;"Fleurs et plantes ornementales"
+"La Plaine-des-Palmistes";97406;2020;4;1,19;"Horticulture";"LA PLAINE-DES-PALMISTES";1,19;"Fleurs et plantes ornementales"
+"Le Port";97407;2010;0;0;"STH & fourrages";"LE PORT";0;NA
+"Le Port";97407;2020;0;0;"STH & fourrages";"LE PORT";0;NA
+"Le Port";97407;2010;7;2,26;"Maraîchage & tubercules";"LE PORT";2,01;NA
+"Le Port";97407;2020;4;2,7;"Maraîchage & tubercules";"LE PORT";2,7;NA
+"Le Port";97407;2010;NA;NA;"Céréales";"LE PORT";0;"céréales"
+"Le Port";97407;2020;0;0;"Céréales";"LE PORT";NA;"céréales"
+"Le Port";97407;2010;0;0;"Grain";"LE PORT";0;"protéagineux et légumes secs pour leur graine"
+"Le Port";97407;2020;0;0;"Grain";"LE PORT";NA;"protéagineux et légumes secs pour leur graine"
+"Le Port";97407;2010;NA;NA;"Canne à sucre";"LE PORT";NA;"plantes à fibres et plantes industrielles diverses"
+"Le Port";97407;2020;NA;NA;"Canne à sucre";"LE PORT";NA;"plantes à fibres et plantes industrielles diverses"
+"Le Port";97407;2010;7;1,97;"PAPAM";"LE PORT";1,97;"plantes à parfum, aromatiques, médicinales"
+"Le Port";97407;2020;5;2,97;"PAPAM";"LE PORT";2,97;"plantes à parfum, aromatiques, médicinales"
+"Le Port";97407;2010;NA;NA;"Horticulture";"LE PORT";0;"Fleurs et plantes ornementales"
+"Le Port";97407;2020;NA;0,74;"Horticulture";"LE PORT";NA;"Fleurs et plantes ornementales"
+"La Possession";97408;2010;23;34,45;"STH & fourrages";"LA POSSESSION";6,81;NA
+"La Possession";97408;2020;3;4,5;"STH & fourrages";"LA POSSESSION";0;NA
+"La Possession";97408;2010;93;40,06;"Maraîchage & tubercules";"LA POSSESSION";31,98;NA
+"La Possession";97408;2020;43;22,19;"Maraîchage & tubercules";"LA POSSESSION";19,8;NA
+"La Possession";97408;2010;36;16,6;"Céréales";"LA POSSESSION";14,25;"céréales"
+"La Possession";97408;2020;0;0;"Céréales";"LA POSSESSION";NA;"céréales"
+"La Possession";97408;2010;4;0,13;"Grain";"LA POSSESSION";0,11;"protéagineux et légumes secs pour leur graine"
+"La Possession";97408;2020;0;0;"Grain";"LA POSSESSION";NA;"protéagineux et légumes secs pour leur graine"
+"La Possession";97408;2010;13;70,05;"Canne à sucre";"LA POSSESSION";NA;"plantes à fibres et plantes industrielles diverses"
+"La Possession";97408;2020;7;42,45;"Canne à sucre";"LA POSSESSION";NA;"plantes à fibres et plantes industrielles diverses"
+"La Possession";97408;2010;29;3,46;"PAPAM";"LA POSSESSION";3,41;"plantes à parfum, aromatiques, médicinales"
+"La Possession";97408;2020;15;2,31;"PAPAM";"LA POSSESSION";2,29;"plantes à parfum, aromatiques, médicinales"
+"La Possession";97408;2010;5;1,45;"Horticulture";"LA POSSESSION";0;"Fleurs et plantes ornementales"
+"La Possession";97408;2020;4;1,55;"Horticulture";"LA POSSESSION";1,5;"Fleurs et plantes ornementales"
+"Saint-André";97409;2010;33;127,56;"STH & fourrages";"SAINT-ANDRE";1,41;NA
+"Saint-André";97409;2020;10;7,67;"STH & fourrages";"SAINT-ANDRE";0;NA
+"Saint-André";97409;2010;75;32,86;"Maraîchage & tubercules";"SAINT-ANDRE";19,38;NA
+"Saint-André";97409;2020;65;29,89;"Maraîchage & tubercules";"SAINT-ANDRE";20,74;NA
+"Saint-André";97409;2010;NA;NA;"Céréales";"SAINT-ANDRE";NA;"céréales"
+"Saint-André";97409;2020;4;0,69;"Céréales";"SAINT-ANDRE";NA;"céréales"
+"Saint-André";97409;2010;0;0;"Grain";"SAINT-ANDRE";0;"protéagineux et légumes secs pour leur graine"
+"Saint-André";97409;2020;0;0;"Grain";"SAINT-ANDRE";NA;"protéagineux et légumes secs pour leur graine"
+"Saint-André";97409;2010;166;2627,81;"Canne à sucre";"SAINT-ANDRE";85,27;"plantes à fibres et plantes industrielles diverses"
+"Saint-André";97409;2020;118;2313,28;"Canne à sucre";"SAINT-ANDRE";104,82;"plantes à fibres et plantes industrielles diverses"
+"Saint-André";97409;2010;34;7,53;"PAPAM";"SAINT-ANDRE";5,08;"plantes à parfum, aromatiques, médicinales"
+"Saint-André";97409;2020;39;13,04;"PAPAM";"SAINT-ANDRE";8,57;"plantes à parfum, aromatiques, médicinales"
+"Saint-André";97409;2010;8;3,78;"Horticulture";"SAINT-ANDRE";0;"Fleurs et plantes ornementales"
+"Saint-André";97409;2020;4;1,02;"Horticulture";"SAINT-ANDRE";1,02;"Fleurs et plantes ornementales"
+"Saint-Benoît";97410;2010;62;288,92;"STH & fourrages";"SAINT-BENOIT";0;NA
+"Saint-Benoît";97410;2020;31;156,56;"STH & fourrages";"SAINT-BENOIT";0;NA
+"Saint-Benoît";97410;2010;95;65,32;"Maraîchage & tubercules";"SAINT-BENOIT";6,31;NA
+"Saint-Benoît";97410;2020;52;15,7;"Maraîchage & tubercules";"SAINT-BENOIT";2,76;NA
+"Saint-Benoît";97410;2010;0;0;"Céréales";"SAINT-BENOIT";0;"céréales"
+"Saint-Benoît";97410;2020;3;0,8;"Céréales";"SAINT-BENOIT";NA;"céréales"
+"Saint-Benoît";97410;2010;NA;NA;"Grain";"SAINT-BENOIT";0;"protéagineux et légumes secs pour leur graine"
+"Saint-Benoît";97410;2020;NA;0,1;"Grain";"SAINT-BENOIT";NA;"protéagineux et légumes secs pour leur graine"
+"Saint-Benoît";97410;2010;409;2832,96;"Canne à sucre";"SAINT-BENOIT";NA;"plantes à fibres et plantes industrielles diverses"
+"Saint-Benoît";97410;2020;347;2723,76;"Canne à sucre";"SAINT-BENOIT";NA;"plantes à fibres et plantes industrielles diverses"
+"Saint-Benoît";97410;2010;17;5,42;"PAPAM";"SAINT-BENOIT";0,52;"plantes à parfum, aromatiques, médicinales"
+"Saint-Benoît";97410;2020;34;23,5;"PAPAM";"SAINT-BENOIT";1,65;"plantes à parfum, aromatiques, médicinales"
+"Saint-Benoît";97410;2010;20;20,8;"Horticulture";"SAINT-BENOIT";0;"Fleurs et plantes ornementales"
+"Saint-Benoît";97410;2020;11;15,48;"Horticulture";"SAINT-BENOIT";1,06;"Fleurs et plantes ornementales"
+"Saint-Denis";97411;2010;59;47,48;"STH & fourrages";"SAINT-DENIS";2,28;NA
+"Saint-Denis";97411;2020;10;18,78;"STH & fourrages";"SAINT-DENIS";0;NA
+"Saint-Denis";97411;2010;142;68,76;"Maraîchage & tubercules";"SAINT-DENIS";55,82;NA
+"Saint-Denis";97411;2020;66;32,46;"Maraîchage & tubercules";"SAINT-DENIS";26;NA
+"Saint-Denis";97411;2010;10;2,59;"Céréales";"SAINT-DENIS";0,64;"céréales"
+"Saint-Denis";97411;2020;NA;2;"Céréales";"SAINT-DENIS";NA;"céréales"
+"Saint-Denis";97411;2010;0;0;"Grain";"SAINT-DENIS";0;"protéagineux et légumes secs pour leur graine"
+"Saint-Denis";97411;2020;0;0;"Grain";"SAINT-DENIS";NA;"protéagineux et légumes secs pour leur graine"
+"Saint-Denis";97411;2010;37;117,05;"Canne à sucre";"SAINT-DENIS";NA;"plantes à fibres et plantes industrielles diverses"
+"Saint-Denis";97411;2020;17;256,78;"Canne à sucre";"SAINT-DENIS";NA;"plantes à fibres et plantes industrielles diverses"
+"Saint-Denis";97411;2010;83;8,91;"PAPAM";"SAINT-DENIS";8;"plantes à parfum, aromatiques, médicinales"
+"Saint-Denis";97411;2020;29;10,2;"PAPAM";"SAINT-DENIS";5,25;"plantes à parfum, aromatiques, médicinales"
+"Saint-Denis";97411;2010;23;6,04;"Horticulture";"SAINT-DENIS";0;"Fleurs et plantes ornementales"
+"Saint-Denis";97411;2020;12;2,36;"Horticulture";"SAINT-DENIS";2,36;"Fleurs et plantes ornementales"
+"Saint-Joseph";97412;2010;140;623,84;"STH & fourrages";"SAINT-JOSEPH";3,6;NA
+"Saint-Joseph";97412;2020;80;421,65;"STH & fourrages";"SAINT-JOSEPH";0;NA
+"Saint-Joseph";97412;2010;264;146,99;"Maraîchage & tubercules";"SAINT-JOSEPH";29,59;NA
+"Saint-Joseph";97412;2020;219;80,39;"Maraîchage & tubercules";"SAINT-JOSEPH";36,76;NA
+"Saint-Joseph";97412;2010;46;11,76;"Céréales";"SAINT-JOSEPH";NA;"céréales"
+"Saint-Joseph";97412;2020;3;0,82;"Céréales";"SAINT-JOSEPH";NA;"céréales"
+"Saint-Joseph";97412;2010;NA;NA;"Grain";"SAINT-JOSEPH";0;"protéagineux et légumes secs pour leur graine"
+"Saint-Joseph";97412;2020;0;0;"Grain";"SAINT-JOSEPH";NA;"protéagineux et légumes secs pour leur graine"
+"Saint-Joseph";97412;2010;279;1700,59;"Canne à sucre";"SAINT-JOSEPH";41,22;"plantes à fibres et plantes industrielles diverses"
+"Saint-Joseph";97412;2020;244;1638,32;"Canne à sucre";"SAINT-JOSEPH";67,2;"plantes à fibres et plantes industrielles diverses"
+"Saint-Joseph";97412;2010;126;77,12;"PAPAM";"SAINT-JOSEPH";3,66;"plantes à parfum, aromatiques, médicinales"
+"Saint-Joseph";97412;2020;116;90,72;"PAPAM";"SAINT-JOSEPH";3,67;"plantes à parfum, aromatiques, médicinales"
+"Saint-Joseph";97412;2010;14;2,48;"Horticulture";"SAINT-JOSEPH";0;"Fleurs et plantes ornementales"
+"Saint-Joseph";97412;2020;9;2,51;"Horticulture";"SAINT-JOSEPH";2,27;"Fleurs et plantes ornementales"
+"Saint-Leu";97413;2010;105;1461,65;"STH & fourrages";"SAINT-LEU";37,56;NA
+"Saint-Leu";97413;2020;86;1750,8;"STH & fourrages";"SAINT-LEU";51,55;NA
+"Saint-Leu";97413;2010;165;98,59;"Maraîchage & tubercules";"SAINT-LEU";62,44;NA
+"Saint-Leu";97413;2020;140;88,92;"Maraîchage & tubercules";"SAINT-LEU";74,32;NA
+"Saint-Leu";97413;2010;6;3,23;"Céréales";"SAINT-LEU";NA;"céréales"
+"Saint-Leu";97413;2020;8;2,82;"Céréales";"SAINT-LEU";0,77;"céréales"
+"Saint-Leu";97413;2010;3;0,1;"Grain";"SAINT-LEU";0;"protéagineux et légumes secs pour leur graine"
+"Saint-Leu";97413;2020;NA;NA;"Grain";"SAINT-LEU";NA;"protéagineux et légumes secs pour leur graine"
+"Saint-Leu";97413;2010;223;1435,79;"Canne à sucre";"SAINT-LEU";787,92;"plantes à fibres et plantes industrielles diverses"
+"Saint-Leu";97413;2020;173;1175,42;"Canne à sucre";"SAINT-LEU";762,67;"plantes à fibres et plantes industrielles diverses"
+"Saint-Leu";97413;2010;37;14,55;"PAPAM";"SAINT-LEU";2,9;"plantes à parfum, aromatiques, médicinales"
+"Saint-Leu";97413;2020;42;8,43;"PAPAM";"SAINT-LEU";5,39;"plantes à parfum, aromatiques, médicinales"
+"Saint-Leu";97413;2010;12;2,82;"Horticulture";"SAINT-LEU";0;"Fleurs et plantes ornementales"
+"Saint-Leu";97413;2020;7;1,28;"Horticulture";"SAINT-LEU";1,28;"Fleurs et plantes ornementales"
+"Saint-Louis";97414;2010;73;223,76;"STH & fourrages";"SAINT-LOUIS";25,67;NA
+"Saint-Louis";97414;2020;59;169,14;"STH & fourrages";"SAINT-LOUIS";67,03;NA
+"Saint-Louis";97414;2010;116;62,92;"Maraîchage & tubercules";"SAINT-LOUIS";47,69;NA
+"Saint-Louis";97414;2020;88;57,64;"Maraîchage & tubercules";"SAINT-LOUIS";43,05;NA
+"Saint-Louis";97414;2010;NA;NA;"Céréales";"SAINT-LOUIS";NA;"céréales"
+"Saint-Louis";97414;2020;5;1,34;"Céréales";"SAINT-LOUIS";0,84;"céréales"
+"Saint-Louis";97414;2010;0;0;"Grain";"SAINT-LOUIS";0;"protéagineux et légumes secs pour leur graine"
+"Saint-Louis";97414;2020;NA;NA;"Grain";"SAINT-LOUIS";NA;"protéagineux et légumes secs pour leur graine"
+"Saint-Louis";97414;2010;282;1222,37;"Canne à sucre";"SAINT-LOUIS";542,25;"plantes à fibres et plantes industrielles diverses"
+"Saint-Louis";97414;2020;214;1048,71;"Canne à sucre";"SAINT-LOUIS";549,27;"plantes à fibres et plantes industrielles diverses"
+"Saint-Louis";97414;2010;52;24,1;"PAPAM";"SAINT-LOUIS";9,27;"plantes à parfum, aromatiques, médicinales"
+"Saint-Louis";97414;2020;33;16,35;"PAPAM";"SAINT-LOUIS";10,52;"plantes à parfum, aromatiques, médicinales"
+"Saint-Louis";97414;2010;8;1,11;"Horticulture";"SAINT-LOUIS";0;"Fleurs et plantes ornementales"
+"Saint-Louis";97414;2020;NA;NA;"Horticulture";"SAINT-LOUIS";NA;"Fleurs et plantes ornementales"
+"Saint-Paul";97415;2010;268;1488,06;"STH & fourrages";"SAINT-PAUL";72,02;NA
+"Saint-Paul";97415;2020;142;1378,81;"STH & fourrages";"SAINT-PAUL";197,1;NA
+"Saint-Paul";97415;2010;289;132,73;"Maraîchage & tubercules";"SAINT-PAUL";108,2;NA
+"Saint-Paul";97415;2020;298;196,34;"Maraîchage & tubercules";"SAINT-PAUL";174,14;NA
+"Saint-Paul";97415;2010;101;32,16;"Céréales";"SAINT-PAUL";16,48;"céréales"
+"Saint-Paul";97415;2020;10;4,72;"Céréales";"SAINT-PAUL";1,72;"céréales"
+"Saint-Paul";97415;2010;4;1,2;"Grain";"SAINT-PAUL";1,2;"protéagineux et légumes secs pour leur graine"
+"Saint-Paul";97415;2020;6;1,5;"Grain";"SAINT-PAUL";1,35;"protéagineux et légumes secs pour leur graine"
+"Saint-Paul";97415;2010;357;1827,15;"Canne à sucre";"SAINT-PAUL";854,42;"plantes à fibres et plantes industrielles diverses"
+"Saint-Paul";97415;2020;249;1340,44;"Canne à sucre";"SAINT-PAUL";756,79;"plantes à fibres et plantes industrielles diverses"
+"Saint-Paul";97415;2010;141;61,27;"PAPAM";"SAINT-PAUL";26,56;"plantes à parfum, aromatiques, médicinales"
+"Saint-Paul";97415;2020;119;46,74;"PAPAM";"SAINT-PAUL";26,75;"plantes à parfum, aromatiques, médicinales"
+"Saint-Paul";97415;2010;28;27,21;"Horticulture";"SAINT-PAUL";0;"Fleurs et plantes ornementales"
+"Saint-Paul";97415;2020;27;40,75;"Horticulture";"SAINT-PAUL";40,25;"Fleurs et plantes ornementales"
+"Saint-Pierre";97416;2010;133;533,93;"STH & fourrages";"SAINT-PIERRE";138,21;NA
+"Saint-Pierre";97416;2020;109;383,34;"STH & fourrages";"SAINT-PIERRE";161,44;NA
+"Saint-Pierre";97416;2010;164;123,63;"Maraîchage & tubercules";"SAINT-PIERRE";93,47;NA
+"Saint-Pierre";97416;2020;194;137,06;"Maraîchage & tubercules";"SAINT-PIERRE";107,13;NA
+"Saint-Pierre";97416;2010;20;3,85;"Céréales";"SAINT-PIERRE";2,63;"céréales"
+"Saint-Pierre";97416;2020;7;1,78;"Céréales";"SAINT-PIERRE";0,53;"céréales"
+"Saint-Pierre";97416;2010;0;0;"Grain";"SAINT-PIERRE";0;"protéagineux et légumes secs pour leur graine"
+"Saint-Pierre";97416;2020;NA;NA;"Grain";"SAINT-PIERRE";NA;"protéagineux et légumes secs pour leur graine"
+"Saint-Pierre";97416;2010;517;2946,97;"Canne à sucre";"SAINT-PIERRE";2227,55;"plantes à fibres et plantes industrielles diverses"
+"Saint-Pierre";97416;2020;428;2443,87;"Canne à sucre";"SAINT-PIERRE";1858,37;"plantes à fibres et plantes industrielles diverses"
+"Saint-Pierre";97416;2010;59;15,49;"PAPAM";"SAINT-PIERRE";11,83;"plantes à parfum, aromatiques, médicinales"
+"Saint-Pierre";97416;2020;53;16,22;"PAPAM";"SAINT-PIERRE";14,78;"plantes à parfum, aromatiques, médicinales"
+"Saint-Pierre";97416;2010;27;21,8;"Horticulture";"SAINT-PIERRE";0;"Fleurs et plantes ornementales"
+"Saint-Pierre";97416;2020;17;25,11;"Horticulture";"SAINT-PIERRE";25,11;"Fleurs et plantes ornementales"
+"Saint-Philippe";97417;2010;0;0;"STH & fourrages";"SAINT-PHILIPPE";0;NA
+"Saint-Philippe";97417;2020;3;0;"STH & fourrages";"SAINT-PHILIPPE";0;NA
+"Saint-Philippe";97417;2010;68;109,15;"Maraîchage & tubercules";"SAINT-PHILIPPE";0;NA
+"Saint-Philippe";97417;2020;14;5,76;"Maraîchage & tubercules";"SAINT-PHILIPPE";2,49;NA
+"Saint-Philippe";97417;2010;NA;NA;"Céréales";"SAINT-PHILIPPE";0;"céréales"
+"Saint-Philippe";97417;2020;3;2,08;"Céréales";"SAINT-PHILIPPE";NA;"céréales"
+"Saint-Philippe";97417;2010;0;0;"Grain";"SAINT-PHILIPPE";0;"protéagineux et légumes secs pour leur graine"
+"Saint-Philippe";97417;2020;0;0;"Grain";"SAINT-PHILIPPE";NA;"protéagineux et légumes secs pour leur graine"
+"Saint-Philippe";97417;2010;105;788,2;"Canne à sucre";"SAINT-PHILIPPE";0;"plantes à fibres et plantes industrielles diverses"
+"Saint-Philippe";97417;2020;93;763,71;"Canne à sucre";"SAINT-PHILIPPE";NA;"plantes à fibres et plantes industrielles diverses"
+"Saint-Philippe";97417;2010;55;141,46;"PAPAM";"SAINT-PHILIPPE";0;"plantes à parfum, aromatiques, médicinales"
+"Saint-Philippe";97417;2020;115;236,88;"PAPAM";"SAINT-PHILIPPE";NA;"plantes à parfum, aromatiques, médicinales"
+"Saint-Philippe";97417;2010;NA;NA;"Horticulture";"SAINT-PHILIPPE";0;"Fleurs et plantes ornementales"
+"Saint-Philippe";97417;2020;NA;0,63;"Horticulture";"SAINT-PHILIPPE";NA;"Fleurs et plantes ornementales"
+"Sainte-Marie";97418;2010;65;347,52;"STH & fourrages";"SAINTE-MARIE";0;NA
+"Sainte-Marie";97418;2020;21;229,67;"STH & fourrages";"SAINTE-MARIE";0;NA
+"Sainte-Marie";97418;2010;65;34,99;"Maraîchage & tubercules";"SAINTE-MARIE";13,64;NA
+"Sainte-Marie";97418;2020;39;20,23;"Maraîchage & tubercules";"SAINTE-MARIE";14,08;NA
+"Sainte-Marie";97418;2010;NA;NA;"Céréales";"SAINTE-MARIE";NA;"céréales"
+"Sainte-Marie";97418;2020;0;0;"Céréales";"SAINTE-MARIE";NA;"céréales"
+"Sainte-Marie";97418;2010;0;0;"Grain";"SAINTE-MARIE";0;"protéagineux et légumes secs pour leur graine"
+"Sainte-Marie";97418;2020;0;0;"Grain";"SAINTE-MARIE";NA;"protéagineux et légumes secs pour leur graine"
+"Sainte-Marie";97418;2010;68;1608,66;"Canne à sucre";"SAINTE-MARIE";148,14;"plantes à fibres et plantes industrielles diverses"
+"Sainte-Marie";97418;2020;46;1332,81;"Canne à sucre";"SAINTE-MARIE";112,24;"plantes à fibres et plantes industrielles diverses"
+"Sainte-Marie";97418;2010;26;4,52;"PAPAM";"SAINTE-MARIE";1,87;"plantes à parfum, aromatiques, médicinales"
+"Sainte-Marie";97418;2020;15;10,17;"PAPAM";"SAINTE-MARIE";2,04;"plantes à parfum, aromatiques, médicinales"
+"Sainte-Marie";97418;2010;45;19,34;"Horticulture";"SAINTE-MARIE";0;"Fleurs et plantes ornementales"
+"Sainte-Marie";97418;2020;36;19,19;"Horticulture";"SAINTE-MARIE";18,93;"Fleurs et plantes ornementales"
+"Sainte-Rose";97419;2010;0;0;"STH & fourrages";"SAINTE-ROSE";0;NA
+"Sainte-Rose";97419;2020;4;2,03;"STH & fourrages";"SAINTE-ROSE";0;NA
+"Sainte-Rose";97419;2010;29;32,29;"Maraîchage & tubercules";"SAINTE-ROSE";0,51;NA
+"Sainte-Rose";97419;2020;9;3,43;"Maraîchage & tubercules";"SAINTE-ROSE";1,17;NA
+"Sainte-Rose";97419;2010;NA;NA;"Céréales";"SAINTE-ROSE";0;"céréales"
+"Sainte-Rose";97419;2020;NA;NA;"Céréales";"SAINTE-ROSE";NA;"céréales"
+"Sainte-Rose";97419;2010;0;0;"Grain";"SAINTE-ROSE";0;"protéagineux et légumes secs pour leur graine"
+"Sainte-Rose";97419;2020;0;0;"Grain";"SAINTE-ROSE";NA;"protéagineux et légumes secs pour leur graine"
+"Sainte-Rose";97419;2010;177;1436,86;"Canne à sucre";"SAINTE-ROSE";0;"plantes à fibres et plantes industrielles diverses"
+"Sainte-Rose";97419;2020;159;1472,98;"Canne à sucre";"SAINTE-ROSE";NA;"plantes à fibres et plantes industrielles diverses"
+"Sainte-Rose";97419;2010;33;42,3;"PAPAM";"SAINTE-ROSE";0;"plantes à parfum, aromatiques, médicinales"
+"Sainte-Rose";97419;2020;63;88,4;"PAPAM";"SAINTE-ROSE";NA;"plantes à parfum, aromatiques, médicinales"
+"Sainte-Rose";97419;2010;4;0,75;"Horticulture";"SAINTE-ROSE";0;"Fleurs et plantes ornementales"
+"Sainte-Rose";97419;2020;3;1,44;"Horticulture";"SAINTE-ROSE";NA;"Fleurs et plantes ornementales"
+"Sainte-Suzanne";97420;2010;44;66,63;"STH & fourrages";"SAINTE-SUZANNE";0;NA
+"Sainte-Suzanne";97420;2020;20;24,86;"STH & fourrages";"SAINTE-SUZANNE";0;NA
+"Sainte-Suzanne";97420;2010;71;58;"Maraîchage & tubercules";"SAINTE-SUZANNE";17,04;NA
+"Sainte-Suzanne";97420;2020;54;31,65;"Maraîchage & tubercules";"SAINTE-SUZANNE";8,14;NA
+"Sainte-Suzanne";97420;2010;NA;NA;"Céréales";"SAINTE-SUZANNE";0;"céréales"
+"Sainte-Suzanne";97420;2020;NA;0,31;"Céréales";"SAINTE-SUZANNE";NA;"céréales"
+"Sainte-Suzanne";97420;2010;0;0;"Grain";"SAINTE-SUZANNE";0;"protéagineux et légumes secs pour leur graine"
+"Sainte-Suzanne";97420;2020;NA;0,74;"Grain";"SAINTE-SUZANNE";NA;"protéagineux et légumes secs pour leur graine"
+"Sainte-Suzanne";97420;2010;145;1516,02;"Canne à sucre";"SAINTE-SUZANNE";NA;"plantes à fibres et plantes industrielles diverses"
+"Sainte-Suzanne";97420;2020;127;1588,08;"Canne à sucre";"SAINTE-SUZANNE";NA;"plantes à fibres et plantes industrielles diverses"
+"Sainte-Suzanne";97420;2010;25;3,59;"PAPAM";"SAINTE-SUZANNE";1,68;"plantes à parfum, aromatiques, médicinales"
+"Sainte-Suzanne";97420;2020;19;3,91;"PAPAM";"SAINTE-SUZANNE";0,8;"plantes à parfum, aromatiques, médicinales"
+"Sainte-Suzanne";97420;2010;12;3,33;"Horticulture";"SAINTE-SUZANNE";0;"Fleurs et plantes ornementales"
+"Sainte-Suzanne";97420;2020;5;2,72;"Horticulture";"SAINTE-SUZANNE";2,3;"Fleurs et plantes ornementales"
+"Salazie";97421;2010;57;49,12;"STH & fourrages";"SALAZIE";1,99;NA
+"Salazie";97421;2020;44;31,38;"STH & fourrages";"SALAZIE";0;NA
+"Salazie";97421;2010;256;192,73;"Maraîchage & tubercules";"SALAZIE";129,82;NA
+"Salazie";97421;2020;217;213,32;"Maraîchage & tubercules";"SALAZIE";172,71;NA
+"Salazie";97421;2010;36;11,03;"Céréales";"SALAZIE";4,33;"céréales"
+"Salazie";97421;2020;NA;NA;"Céréales";"SALAZIE";NA;"céréales"
+"Salazie";97421;2010;0;0;"Grain";"SALAZIE";0;"protéagineux et légumes secs pour leur graine"
+"Salazie";97421;2020;0;0;"Grain";"SALAZIE";NA;"protéagineux et légumes secs pour leur graine"
+"Salazie";97421;2010;13;62,93;"Canne à sucre";"SALAZIE";1,1;"plantes à fibres et plantes industrielles diverses"
+"Salazie";97421;2020;8;43,25;"Canne à sucre";"SALAZIE";NA;"plantes à fibres et plantes industrielles diverses"
+"Salazie";97421;2010;29;1,81;"PAPAM";"SALAZIE";1,31;"plantes à parfum, aromatiques, médicinales"
+"Salazie";97421;2020;63;7,39;"PAPAM";"SALAZIE";7,19;"plantes à parfum, aromatiques, médicinales"
+"Salazie";97421;2010;19;5,31;"Horticulture";"SALAZIE";0;"Fleurs et plantes ornementales"
+"Salazie";97421;2020;13;8,24;"Horticulture";"SALAZIE";8,19;"Fleurs et plantes ornementales"
+"Le Tampon";97422;2010;393;5040,61;"STH & fourrages";"LE TAMPON";69,83;NA
+"Le Tampon";97422;2020;322;4783,18;"STH & fourrages";"LE TAMPON";19,31;NA
+"Le Tampon";97422;2010;753;561,93;"Maraîchage & tubercules";"LE TAMPON";427,86;NA
+"Le Tampon";97422;2020;740;578,21;"Maraîchage & tubercules";"LE TAMPON";471,22;NA
+"Le Tampon";97422;2010;17;8,9;"Céréales";"LE TAMPON";3,14;"céréales"
+"Le Tampon";97422;2020;8;2,05;"Céréales";"LE TAMPON";NA;"céréales"
+"Le Tampon";97422;2010;4;0,65;"Grain";"LE TAMPON";0,3;"protéagineux et légumes secs pour leur graine"
+"Le Tampon";97422;2020;0;0;"Grain";"LE TAMPON";NA;"protéagineux et légumes secs pour leur graine"
+"Le Tampon";97422;2010;188;1470,77;"Canne à sucre";"LE TAMPON";278,67;"plantes à fibres et plantes industrielles diverses"
+"Le Tampon";97422;2020;133;1015,79;"Canne à sucre";"LE TAMPON";198,57;"plantes à fibres et plantes industrielles diverses"
+"Le Tampon";97422;2010;122;37,52;"PAPAM";"LE TAMPON";22,69;"plantes à parfum, aromatiques, médicinales"
+"Le Tampon";97422;2020;119;26,22;"PAPAM";"LE TAMPON";13,33;"plantes à parfum, aromatiques, médicinales"
+"Le Tampon";97422;2010;61;27,64;"Horticulture";"LE TAMPON";0;"Fleurs et plantes ornementales"
+"Le Tampon";97422;2020;37;20,29;"Horticulture";"LE TAMPON";17,56;"Fleurs et plantes ornementales"
+"Les Trois-Bassins";97423;2010;67;879,58;"STH & fourrages";"LES TROIS-BASSINS";0;NA
+"Les Trois-Bassins";97423;2020;55;615,51;"STH & fourrages";"LES TROIS-BASSINS";5,17;NA
+"Les Trois-Bassins";97423;2010;23;12,47;"Maraîchage & tubercules";"LES TROIS-BASSINS";4,17;NA
+"Les Trois-Bassins";97423;2020;35;22,55;"Maraîchage & tubercules";"LES TROIS-BASSINS";10,66;NA
+"Les Trois-Bassins";97423;2010;0;0;"Céréales";"LES TROIS-BASSINS";0;"céréales"
+"Les Trois-Bassins";97423;2020;NA;0,45;"Céréales";"LES TROIS-BASSINS";NA;"céréales"
+"Les Trois-Bassins";97423;2010;NA;NA;"Grain";"LES TROIS-BASSINS";0;"protéagineux et légumes secs pour leur graine"
+"Les Trois-Bassins";97423;2020;0;0;"Grain";"LES TROIS-BASSINS";NA;"protéagineux et légumes secs pour leur graine"
+"Les Trois-Bassins";97423;2010;46;209,66;"Canne à sucre";"LES TROIS-BASSINS";36,45;"plantes à fibres et plantes industrielles diverses"
+"Les Trois-Bassins";97423;2020;31;149,34;"Canne à sucre";"LES TROIS-BASSINS";56,45;"plantes à fibres et plantes industrielles diverses"
+"Les Trois-Bassins";97423;2010;13;7,87;"PAPAM";"LES TROIS-BASSINS";1,4;"plantes à parfum, aromatiques, médicinales"
+"Les Trois-Bassins";97423;2020;11;3,89;"PAPAM";"LES TROIS-BASSINS";0,55;"plantes à parfum, aromatiques, médicinales"
+"Les Trois-Bassins";97423;2010;NA;NA;"Horticulture";"LES TROIS-BASSINS";0;"Fleurs et plantes ornementales"
+"Les Trois-Bassins";97423;2020;3;3,73;"Horticulture";"LES TROIS-BASSINS";3,73;"Fleurs et plantes ornementales"
+"Cilaos";97424;2010;13;14,37;"STH & fourrages";"CILAOS";0;NA
+"Cilaos";97424;2020;0;0;"STH & fourrages";"CILAOS";0;NA
+"Cilaos";97424;2010;84;39,69;"Maraîchage & tubercules";"CILAOS";35,76;NA
+"Cilaos";97424;2020;54;32,35;"Maraîchage & tubercules";"CILAOS";32,35;NA
+"Cilaos";97424;2010;NA;NA;"Céréales";"CILAOS";NA;"céréales"
+"Cilaos";97424;2020;NA;NA;"Céréales";"CILAOS";NA;"céréales"
+"Cilaos";97424;2010;40;15,87;"Grain";"CILAOS";15,86;"protéagineux et légumes secs pour leur graine"
+"Cilaos";97424;2020;20;13,4;"Grain";"CILAOS";13,4;"protéagineux et légumes secs pour leur graine"
+"Cilaos";97424;2010;0;0;"Canne à sucre";"CILAOS";1,01;"plantes à fibres et plantes industrielles diverses"
+"Cilaos";97424;2020;0;0;"Canne à sucre";"CILAOS";NA;"plantes à fibres et plantes industrielles diverses"
+"Cilaos";97424;2010;11;1,83;"PAPAM";"CILAOS";1,83;"plantes à parfum, aromatiques, médicinales"
+"Cilaos";97424;2020;NA;0,05;"PAPAM";"CILAOS";NA;"plantes à parfum, aromatiques, médicinales"
+"Cilaos";97424;2010;NA;NA;"Horticulture";"CILAOS";0;"Fleurs et plantes ornementales"
+"Cilaos";97424;2020;0;0;"Horticulture";"CILAOS";NA;"Fleurs et plantes ornementales"
