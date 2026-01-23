@@ -8,6 +8,7 @@ fg_veg_SAU <-  function(df_resume_culture, selected_Com){
   
   graph_SAU <- df_resume_culture %>%
     filter(Culture %in% unique(filter(df_resume_culture, Zone == selected_Com, SAU > 0)$Culture)) %>% 
+    mutate(Culture = str_replace(Culture, '&', '\n&')) %>%
     ggplot(aes(x = Culture, y = SAU, fill = An_Zone)) +
     geom_col(position = 'dodge') +
     scale_fill_manual(values = palette_zone) +
@@ -34,6 +35,7 @@ fg_veg_N <-  function(df_resume_culture, selected_Com){
   
   graph_N <- df_resume_culture %>%
     filter(Culture %in% unique(filter(df_resume_culture, Zone == selected_Com, SAU > 0)$Culture)) %>% 
+    mutate(Culture = str_replace(Culture, '&', '\n&')) %>%
     arrange(Culture == 'Autre', -N) %>%
     mutate(Culture = factor(Culture, unique(Culture))) %>%
     ggplot(aes(x = Culture, y = N, fill = An_Zone)) +

@@ -55,7 +55,7 @@ selected_interco_lib <- filter(df_communes, Commune == selected_Com)$EPCI
 selected_interco_com <- filter(df_communes, EPCI == selected_interco_lib)$Commune
 selected_interco_num <- filter(df_communes, EPCI == selected_interco_lib)%>%nrow()
 
-f_palette(selected_Com, selected_interco_lib)
+palette_zone <- f_palette(selected_Com, selected_interco_lib)
 
 df_resume_commune <- f_resume_commune(N_SAU_com, 
                                    selected_Com, 
