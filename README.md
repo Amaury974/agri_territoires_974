@@ -1,3 +1,5 @@
-# agri_territoires_974
+# demo.Shiny.Leaflet
 
-appli R Shiny de visualisation des données agricoles sur le trritoire de La Réunion
+Micro-application R Shiny.
+Démonstration de cartographie interactive avec Leaflet.
+Basé sur les données de recensement agricole de la DAAF à La Réunion et sur des données fictives.
