@@ -19,6 +19,7 @@ library(dplyr); options(dplyr.summarise.inform = FALSE)
 library(tidyr) # pivot table
 library(stringr)
 
+library(pack.figures) # package perso. Marqueurs colorés 
 
 
 ### ________________________________________________________________________ ###
@@ -93,12 +94,12 @@ N_expl_comm <- NULL
 # ~~~~{    parcelles page 2    }~~~~ #
 
 palette_exploitations <- 
-  ajorant.figures::mega_Palette(length(unique(sf_parcelles$expl)))           # une palette suffisamment grande pour toutes les exploitations
+  mega_Palette(length(unique(sf_parcelles$expl)))           # une palette suffisamment grande pour toutes les exploitations
 
 names(palette_exploitations) <- unique(sf_parcelles$expl)                    # chaque couleur correspond à une exploitation
 
 
-list_icons <- ajorant.figures::leaf_colored_markers(palette_exploitations)      # liste de marqueurs colorés basés sur la palette de couleurs
+list_icons <- leaf_colored_markers(palette_exploitations)      # liste de marqueurs colorés basés sur la palette de couleurs
 
 
 # black_dot <- makeIcon(

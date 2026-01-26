@@ -1,3 +1,11 @@
+# encoding UTF-8
+# développé sous R 4.4.2
+# dernière édition : décembre 2025
+# auteur / contact : amaury.jorant@reunion.chambagri.fr
+# __________
+# 
+# Projet : Shiny demo
+#¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
 
 
 
