@@ -145,11 +145,11 @@ ui <- fluidPage(
     style = "max-width: 1100px; margin: 0 auto; padding: 0 10px; font-size: 0.85em;",  # Réduit la taille de police de 15%
     
     hr(),
-    h4("📧 Contacts"),
+    h4("📞 Contacts"),
     fluidRow(
       column(4,
              tags$p(
-               tags$strong("Équipe de développement"),
+               tags$strong("Développement et extraction des données"),
                tags$br(),
                "Amaury Jorant - Bureau des références statistiques (D3P)",
                tags$br(),
